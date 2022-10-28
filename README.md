@@ -1,6 +1,7 @@
-# Name of project
+# Hack your weather
 
-> A longer description
+> Weather app that enable users to get instant alerts regarding weather conditions.
+
 
 ## Table of contents
 
@@ -22,7 +23,7 @@
 
 ## General info
 
-> A short description
+> Weather app that enable users to get instant alerts regarding weather conditions. It is a final project for hack your future
 
 ## Screenshots
 
@@ -33,8 +34,13 @@
 - Node 14.16.0
 - VSC code
 - JavaScript
-- ...
-- ...
+- HTML
+- CSS
+- React
+- Strapi
+- Figma
+- Excalidraw
+- Railway
 
 ## Setup
 
@@ -57,8 +63,9 @@ List of features ready and Todos for future development
 
 To-do list:
 
--
--
+- UI/UX
+- Search by city
+- Deployment
 
 ## Status
 
@@ -66,7 +73,7 @@ Project is: _in progress_
 
 ## Inspiration
 
-Project by freeCodeCamp.org
+Project by hackyourfuture.be
 
 ## Contact
 
