@@ -1,7 +1,7 @@
 # Hack your weather
 
-> Weather app that enable users to get instant alerts regarding weather conditions.
-
+> Weather app that enable users to get instant alerts regarding weather
+> conditions.
 
 ## Table of contents
 
@@ -23,7 +23,8 @@
 
 ## General info
 
-> Weather app that enable users to get instant alerts regarding weather conditions. It is a final project for hack your future
+> Weather app that enable users to get instant alerts regarding weather
+> conditions. It is a final project for hack your future
 
 ## Screenshots
 
