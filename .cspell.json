@@ -1,6 +1,24 @@
 {
   "language": "en",
-  "words": [],
+  "words": [
+    "WIREFRAME",
+    "wireframe",
+    "Ponomarev",
+    "Lant",
+    "Yodiz",
+    "Zepel",
+    "Excalidraw",
+    "Wireframes",
+    "Bilde",
+    "Christiaan",
+    "Verwijs",
+    "hamburguer",
+    "Nepo",
+    "Strapi",
+    "Excalidraw",
+    "Todos",
+    "hackyourfuture"
+  ],
   "ignorePaths": [
     "node_modules/**",
     "package.json",
