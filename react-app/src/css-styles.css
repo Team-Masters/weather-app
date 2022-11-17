@@ -11,25 +11,25 @@
       #b9cdec 0.13%,
       #0973d0 0.14%,
       #cdcdcd 41.16%,
-      #ffffff 99.84%
+      #fff 99.84%
     ),
-    #ffffff;
-  border: 1px solid #000000;
+    #fff;
+  border: 1px solid #000;
 }
 
 .city {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 23px;
   text-align: center;
   letter-spacing: 0.01em;
   margin-top: 100px;
-  color: #000000;
+  color: #000;
 }
 
 .temperature {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 40px;
   line-height: 47px;
@@ -87,7 +87,6 @@
   left: 0;
   bottom: 0;
   height: 652px;
-  width: 0px;
   overflow: hidden;
   max-width: 175px;
   border-top-right-radius: 40px;
@@ -97,7 +96,7 @@
       #b9cdec 0.13%,
       #0973d0 0.14%,
       #cdcdcd 41.16%,
-      #ffffff 99.84%
+      #fff 99.84%
     ),
     #020202;
   visibility: hidden;
@@ -112,6 +111,7 @@
   margin-top: 80px;
   justify-content: center;
 }
+
 .avatar {
   height: 100px;
   width: 100px;
