@@ -1,3 +1,5 @@
+import React from "react";
+
 const WeatherCard = ({ weatherData }) => (
   <div>
     <div className="home-header">

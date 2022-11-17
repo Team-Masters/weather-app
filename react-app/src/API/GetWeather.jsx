@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import WeatherCard from "../view-models/WeatherCard";
 import { Dimmer, Loader } from "semantic-ui-react";

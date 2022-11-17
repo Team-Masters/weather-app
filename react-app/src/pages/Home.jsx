@@ -1,5 +1,6 @@
+import React from "react";
 import Navbar from "../components/Navbar";
-import { GetWeather } from "../API/GetWeather";
+import { GetWeather } from "../api/GetWeather";
 
 const Home = () => {
   return (
