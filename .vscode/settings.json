@@ -2,7 +2,10 @@
   "editor.formatOnSave": true,
   "editor.renderIndentGuides": true,
   "editor.tabSize": 2,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "liveServer.settings.port": 5504
+  "liveServer.settings.port": 5504,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }

@@ -1,0 +1,124 @@
+/* Styling for homepage */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 667px;
+  justify-content: last baseline;
+  align-items: center;
+  background: linear-gradient(
+      179.83deg,
+      #b9cdec 0.13%,
+      #0973d0 0.14%,
+      #cdcdcd 41.16%,
+      #fff 99.84%
+    ),
+    #fff;
+  border: 1px solid #000;
+}
+
+.city {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin-top: 100px;
+  color: #000;
+}
+
+.temperature {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.weather-condition {
+  text-align: center;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.max-min-temperature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  gap: 5px;
+}
+
+.weather-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-icon {
+  width: 150px;
+  height: 150px;
+}
+
+/* Styling for the hamburguer menu */
+
+.navBar {
+  position: relative;
+}
+
+.navBar button {
+  position: fixed;
+  left: 40px;
+  top: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 652px;
+  overflow: hidden;
+  max-width: 175px;
+  border-top-right-radius: 40px;
+  border: 1px solid black;
+  background: linear-gradient(
+      179.83deg,
+      #b9cdec 0.13%,
+      #0973d0 0.14%,
+      #cdcdcd 41.16%,
+      #fff 99.84%
+    ),
+    #020202;
+  visibility: hidden;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+  visibility: visible;
+}
+
+.avatar-container {
+  margin-top: 80px;
+  justify-content: center;
+}
+
+.avatar {
+  height: 100px;
+  width: 100px;
+}
+
+.log-sign-in {
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+}
