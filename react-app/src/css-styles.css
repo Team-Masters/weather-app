@@ -3,8 +3,8 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  height: 667px;
-  justify-content: last baseline;
+  height: 670px;
+  width: 375px;
   align-items: center;
   background: linear-gradient(
       179.83deg,
@@ -14,7 +14,6 @@
       #fff 99.84%
     ),
     #fff;
-  border: 1px solid #000;
 }
 
 .city {
@@ -66,11 +65,8 @@
 
 /* Styling for the hamburguer menu */
 
-.navBar {
-  position: relative;
-}
-
-.navBar button {
+.hamburger-icon {
+  visibility: visible;
   position: fixed;
   left: 40px;
   top: 40px;
@@ -88,9 +84,8 @@
   bottom: 0;
   height: 652px;
   overflow: hidden;
-  max-width: 175px;
+  max-width: 370px;
   border-top-right-radius: 40px;
-  border: 1px solid black;
   background: linear-gradient(
       179.83deg,
       #b9cdec 0.13%,
@@ -107,8 +102,28 @@
   visibility: visible;
 }
 
+.login-signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.log-in-button {
+  margin-right: 5px;
+}
+
+.signup-login-buttons {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
 .avatar-container {
+  display: flex;
   margin-top: 80px;
+  margin-bottom: 10px;
   justify-content: center;
 }
 
@@ -117,8 +132,12 @@
   width: 100px;
 }
 
-.log-sign-in {
-  display: inline-flex;
-  gap: 10px;
-  justify-content: center;
+.log-in-container,
+.sign-up-container {
+  margin: auto;
+  padding: 20px;
+}
+
+.form-buttons {
+  background-color: transparent !important;
 }

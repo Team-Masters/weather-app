@@ -6,9 +6,7 @@ const Home = () => {
   return (
     <>
       <div className="home-container">
-        <div>
-          <Navbar />
-        </div>
+        <Navbar />
         <div>{GetWeather()}</div>
       </div>
     </>
