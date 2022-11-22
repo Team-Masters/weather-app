@@ -141,3 +141,21 @@
 .form-buttons {
   background-color: transparent !important;
 }
+
+.search {
+  text-align: center;
+  padding: 1rem;
+  padding-top: 3rem;
+}
+
+.input {
+  padding: 0.4rem 2.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.603);
+}
+
+.search-container {
+  max-width: 500px;
+  margin: 20px auto;
+}
