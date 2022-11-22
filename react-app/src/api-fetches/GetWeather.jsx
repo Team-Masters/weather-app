@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import WeatherCard from "../view-models/WeatherCard";
 import { Dimmer, Loader } from "semantic-ui-react";
 
-export const GetWeather = () => {
+export const GetWeather = ({ searchedData }) => {
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
   const [data, setData] = useState([]);
@@ -27,11 +27,11 @@ export const GetWeather = () => {
     };
     fetchData();
   }, [lat, long]);
-
+  console.log("long and lat: ", long, lat);
   return (
     <div>
       {typeof data.main != "undefined" ? (
-        <WeatherCard weatherData={data} />
+        <WeatherCard weatherData={data} searchedData={searchedData} />
       ) : (
         <div>
           <Dimmer active>
