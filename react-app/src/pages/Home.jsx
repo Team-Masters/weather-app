@@ -39,18 +39,13 @@ const Home = () => {
   return (
     <>
       <div className="home-container">
-<<<<<<< HEAD
-        <Navbar />
-        <div>{GetWeather()}</div>
-=======
-        <div>
-          <Navbar />
-        </div>
         <div className="search-container">
           <Search onSearchChange={handleOnSearchChange} />
         </div>
         <GetWeather searchedData={currentWeather} />
->>>>>>> get-weather-by-city
+      </div>
+      <div>
+        <Navbar />
       </div>
     </>
   );
