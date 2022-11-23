@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const WeatherCard = ({ weatherData, searchedData }) => {
   console.log("searcheddata: ", searchedData);

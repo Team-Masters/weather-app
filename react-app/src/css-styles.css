@@ -148,14 +148,29 @@
   padding-top: 3rem;
 }
 
-.input {
-  padding: 0.4rem 2.5rem;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.603);
+.search-container {
+  max-width: 200px;
+  margin-top: 60px;
 }
 
-.search-container {
-  max-width: 500px;
-  margin: 20px auto;
+.search-container input,
+.css-qc6sy-singleValue {
+  width: 200px !important;
+  padding-left: 5px !important;
+  color: black !important;
+}
+
+.css-1s2u09g-control {
+  background: transparent !important;
+  border: 1px solid #000 !important;
+  color: black !important;
+}
+
+.css-14el2xx-placeholder {
+  color: black !important;
+}
+
+.css-1okebmr-indicatorSeparator,
+.css-tj5bde-Svg {
+  border: 1px solid rgb(80, 78, 78) !important;
 }
