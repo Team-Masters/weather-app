@@ -48,7 +48,7 @@ const Home = () => {
           {forecast && <Forecast data={forecast} />}
         </div>
       </div>
-      <div>
+      <div className="navigation-bar">
         <Navbar />
       </div>
     </>

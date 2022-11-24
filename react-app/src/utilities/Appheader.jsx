@@ -19,7 +19,7 @@ const AppHeader = () => {
       {user ? (
         <>
           <Button className="log-in-button" href="/Profile" type="primary">
-            My profile
+            profile
           </Button>
           <Button
             className="auth_button_logout"

@@ -9,12 +9,12 @@ const ProfilePicture = () => {
       {user ? (
         <>
           <Avatar
-            size={100}
+            size={108}
             style={{
-              backgroundColor: "black",
+              backgroundColor: "transparent",
               color: "white",
-              backgroundImage: `url(https://res.cloudinary.com/dembmmjyq/image/upload/v1669288623/icon_scrxpk.png)`,
-              backgroundSize: "90px 90px",
+              backgroundImage: `url(https://res.cloudinary.com/dembmmjyq/image/upload/v1669323108/icon_zt0qm6.png)`,
+              backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
             }}
           >
@@ -24,7 +24,7 @@ const ProfilePicture = () => {
       ) : (
         <>
           <Avatar
-            size={100}
+            size={108}
             src="https://res.cloudinary.com/dembmmjyq/image/upload/v1669289115/3721881_pwgyie.png"
           >
             USER
