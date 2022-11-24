@@ -1,5 +1,10 @@
 /* Styling for homepage */
 
+#root {
+  height: 670px;
+  width: 375px;
+}
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -76,7 +81,6 @@
 }
 
 .menuNav {
-  overflow-y: scroll;
   list-style: none;
   position: fixed;
   top: 0;

@@ -33,9 +33,9 @@ export const GetWeather = ({ searchedData }) => {
       {typeof data.main != "undefined" ? (
         <WeatherCard weatherData={data} searchedData={searchedData} />
       ) : (
-        <div>
+        <div className="dimmer">
           <Dimmer active>
-            <Loader>Loading..</Loader>
+            <Loader>Loading weather...</Loader>
           </Dimmer>
         </div>
       )}
