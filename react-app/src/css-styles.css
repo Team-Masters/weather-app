@@ -86,13 +86,13 @@
   overflow: hidden;
   max-width: 370px;
   background: linear-gradient(
-      179.83deg,
-      #b9cdec 0.13%,
-      #0973d0 0.14%,
-      #cdcdcd 41.16%,
-      #fff 99.84%
-    ),
-    #020202;
+    179.83deg,
+    #b9cdec 0.13%,
+    #0973d0 0.14%,
+    #cdcdcd 41.16%,
+    #fff 99.84%
+  );
+
   visibility: hidden;
 }
 
@@ -186,4 +186,44 @@
 
 .settings-icon {
   cursor: pointer;
+}
+
+/*** Weather forecast styling ***/
+
+.accordion {
+  display: flex;
+  flex-direction: row;
+  margin: 4px, 4px;
+  padding: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: absolute;
+  width: 328px;
+  height: 186px;
+  left: 25px;
+  background: radial-gradient(
+      178.6% 159.68% at 51.68% 0%,
+      rgba(18, 119, 208, 0.3) 0%,
+      rgba(75, 152, 219, 0.235313) 39.58%,
+      rgba(255, 255, 255, 0.03) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.daily-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+}
+
+.icon-small {
+  width: 40px;
 }

@@ -7,6 +7,8 @@ import {
   WEATHER_API_KEY,
 } from "../api-fetches/auto-cpmplete.service";
 import "../css-styles.css";
+import Forecast from "../components/Forecast";
+
 const Home = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
@@ -27,7 +29,7 @@ const Home = () => {
         const forecastResponse = await response[1].json();
 
         setCurrentWeather({ city: searchData.label, weatherResponse });
-        setForecast({ forecastResponse });
+        setForecast({ city: searchData.label, ...forecastResponse });
       })
       .catch((err) => {
         console.log(err);
@@ -43,6 +45,10 @@ const Home = () => {
           <Search onSearchChange={handleOnSearchChange} />
         </div>
         <GetWeather searchedData={currentWeather} />
+        <div className="forecast">
+          {" "}
+          {forecast && <Forecast data={forecast} />}
+        </div>
       </div>
       <div>
         <Navbar />
