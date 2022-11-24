@@ -85,7 +85,6 @@
   height: 652px;
   overflow: hidden;
   max-width: 370px;
-  border-top-right-radius: 40px;
   background: linear-gradient(
       179.83deg,
       #b9cdec 0.13%,
@@ -102,11 +101,14 @@
   visibility: visible;
 }
 
+/*** Forms ***/
+
 .login-signup-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-right: 40px;
+  margin-top: 20px;
 }
 
 .log-in-button {
@@ -117,19 +119,20 @@
   display: flex;
   margin: auto;
   justify-content: center;
-  margin-bottom: 30px;
+}
+
+.log-in-button {
+  background-color: white;
+  color: black;
 }
 
 .avatar-container {
   display: flex;
-  margin-top: 80px;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 5px;
   margin-bottom: 10px;
   justify-content: center;
-}
-
-.avatar {
-  height: 100px;
-  width: 100px;
 }
 
 .log-in-container,
@@ -173,4 +176,14 @@
 .css-1okebmr-indicatorSeparator,
 .css-tj5bde-Svg {
   border: 1px solid rgb(80, 78, 78) !important;
+}
+
+.search-bar-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.settings-icon {
+  cursor: pointer;
 }

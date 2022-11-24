@@ -6,6 +6,7 @@ import Appheader from "../utilities/Appheader";
 import NavigationRoutes from "./NavigationRoutes";
 import { Layout } from "antd";
 import { useNavigate } from "react-router-dom";
+import ProfilePicture from "../components/ProfilePicture";
 
 const Navbar = () => {
   const { Header } = Layout;
@@ -26,32 +27,24 @@ const Navbar = () => {
   return (
     <nav className="navBar">
       <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-        <div>
-          <button
-            onClick={() => {
-              handleToggle();
-              returnHomePage();
-            }}
-            className="hamburger-icon"
-          >
-            {navbarOpen ? (
-              <BiLeftArrowAlt
-                style={{ color: "black", width: "20px", height: "20px" }}
-              />
-            ) : (
-              <FiMenu
-                style={{ color: "black", width: "20px", height: "20px" }}
-              />
-            )}
-          </button>
-        </div>
+        <button
+          onClick={() => {
+            handleToggle();
+            returnHomePage();
+          }}
+          className="hamburger-icon"
+        >
+          {navbarOpen ? (
+            <BiLeftArrowAlt
+              style={{ color: "black", width: "20px", height: "20px" }}
+            />
+          ) : (
+            <FiMenu style={{ color: "black", width: "20px", height: "20px" }} />
+          )}
+        </button>
         <div className="login-signup-container">
           <div className="avatar-container">
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/149/149071.png"
-              alt="avatar"
-              className="avatar"
-            />
+            <ProfilePicture />
           </div>
           <div className="forms-container">
             <Layout style={{ backgroundColor: "transparent" }}>
