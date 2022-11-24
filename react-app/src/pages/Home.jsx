@@ -8,6 +8,7 @@ import {
 } from "../api-fetches/auto-cpmplete.service";
 import "../css-styles.css";
 import Forecast from "../components/Forecast";
+import { EventList } from "../components/EventList";
 
 const Home = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -37,15 +38,35 @@ const Home = () => {
   };
   console.log("current weather: ", currentWeather);
   console.log("forecast: ", forecast);
+  const [check, setCheck] = useState("");
+
+  const eventListHandle = () => {
+    const checker = "Event";
+    console.log("checker: ", checker);
+    setCheck(checker);
+    return checker;
+  };
+
   return (
     <>
       <div className="home-container">
+        <div></div>
         <div className="search-container">
           <Search onSearchChange={handleOnSearchChange} />
         </div>
-        <GetWeather searchedData={currentWeather} />
+        <button
+          type="button"
+          className="event-button"
+          onClick={eventListHandle}
+        >
+          Events
+        </button>
+        <div className="the-event-container">
+          {check === "Event" ? <EventList /> : ""}
+        </div>
+        {check === "Event" ? "" : <GetWeather searchedData={currentWeather} />}
         <div className="forecast">
-          {forecast && <Forecast data={forecast} />}
+          {check === "Event" ? "" : forecast && <Forecast data={forecast} />}
         </div>
       </div>
       <div className="navigation-bar">
