@@ -18,8 +18,8 @@ const AppHeader = () => {
     <div className="signup-login-buttons">
       {user ? (
         <>
-          <Button className="auth_button_login" href="/Profile" type="link">
-            {user.username}
+          <Button className="log-in-button" href="/Profile" type="primary">
+            My profile
           </Button>
           <Button
             className="auth_button_logout"

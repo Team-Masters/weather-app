@@ -85,15 +85,14 @@
   height: 652px;
   overflow: hidden;
   max-width: 370px;
-  border-top-right-radius: 40px;
   background: linear-gradient(
-      179.83deg,
-      #b9cdec 0.13%,
-      #0973d0 0.14%,
-      #cdcdcd 41.16%,
-      #fff 99.84%
-    ),
-    #020202;
+    179.83deg,
+    #b9cdec 0.13%,
+    #0973d0 0.14%,
+    #cdcdcd 41.16%,
+    #fff 99.84%
+  );
+
   visibility: hidden;
 }
 
@@ -102,11 +101,14 @@
   visibility: visible;
 }
 
+/*** Forms ***/
+
 .login-signup-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-right: 40px;
+  margin-top: 20px;
 }
 
 .log-in-button {
@@ -117,19 +119,20 @@
   display: flex;
   margin: auto;
   justify-content: center;
-  margin-bottom: 30px;
+}
+
+.log-in-button {
+  background-color: white;
+  color: black;
 }
 
 .avatar-container {
   display: flex;
-  margin-top: 80px;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 5px;
   margin-bottom: 10px;
   justify-content: center;
-}
-
-.avatar {
-  height: 100px;
-  width: 100px;
 }
 
 .log-in-container,
@@ -141,6 +144,8 @@
 .form-buttons {
   background-color: transparent !important;
 }
+
+/** Search for location styles **/
 
 .search {
   text-align: center;
@@ -161,16 +166,66 @@
 }
 
 .css-1s2u09g-control {
-  background: transparent !important;
   border: 1px solid #000 !important;
   color: black !important;
 }
 
 .css-14el2xx-placeholder {
   color: black !important;
+  text-align: center;
 }
 
 .css-1okebmr-indicatorSeparator,
 .css-tj5bde-Svg {
-  border: 1px solid rgb(80, 78, 78) !important;
+  border: 1px solid white !important;
+}
+
+.search-bar-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.settings-icon {
+  cursor: pointer;
+}
+
+/*** Weather forecast styling ***/
+
+.accordion {
+  display: flex;
+  flex-direction: row;
+  margin: 4px, 4px;
+  padding: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: absolute;
+  width: 328px;
+  height: 186px;
+  left: 25px;
+  background: radial-gradient(
+      178.6% 159.68% at 51.68% 0%,
+      rgba(18, 119, 208, 0.3) 0%,
+      rgba(75, 152, 219, 0.235313) 39.58%,
+      rgba(255, 255, 255, 0.03) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.daily-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+}
+
+.icon-small {
+  width: 40px;
 }
