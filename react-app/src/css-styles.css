@@ -145,6 +145,8 @@
   background-color: transparent !important;
 }
 
+/** Search for location styles **/
+
 .search {
   text-align: center;
   padding: 1rem;
@@ -164,18 +166,18 @@
 }
 
 .css-1s2u09g-control {
-  background: transparent !important;
   border: 1px solid #000 !important;
   color: black !important;
 }
 
 .css-14el2xx-placeholder {
   color: black !important;
+  text-align: center;
 }
 
 .css-1okebmr-indicatorSeparator,
 .css-tj5bde-Svg {
-  border: 1px solid rgb(80, 78, 78) !important;
+  border: 1px solid white !important;
 }
 
 .search-bar-section {

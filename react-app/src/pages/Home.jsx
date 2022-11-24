@@ -35,7 +35,6 @@ const Home = () => {
         console.log(err);
       });
   };
-
   console.log("current weather: ", currentWeather);
   console.log("forecast: ", forecast);
   return (
@@ -46,7 +45,6 @@ const Home = () => {
         </div>
         <GetWeather searchedData={currentWeather} />
         <div className="forecast">
-          {" "}
           {forecast && <Forecast data={forecast} />}
         </div>
       </div>

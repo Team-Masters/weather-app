@@ -1,5 +1,5 @@
 import { AsyncPaginate } from "react-select-async-paginate";
-import { MdSettings } from "react-icons/md";
+import { CiSettings } from "react-icons/ci";
 import React, { useState } from "react";
 import {
   geoApiOptions,
@@ -35,7 +35,7 @@ const Search = ({ onSearchChange }) => {
   return (
     <div className="search-bar-section">
       <AsyncPaginate
-        placeholder="  🔍 Search"
+        placeholder="Search"
         debounce={600}
         value={search}
         onChange={handleOnChange}
@@ -43,7 +43,7 @@ const Search = ({ onSearchChange }) => {
       />
       <div className="settings-icon">
         <h1>
-          <MdSettings />
+          <CiSettings />
         </h1>
       </div>
     </div>
