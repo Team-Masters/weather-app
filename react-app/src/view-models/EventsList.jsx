@@ -1,10 +1,7 @@
 import { getCalendarEvents } from "../api-fetches/events.service";
 import { getWeatherInfo } from "../api-fetches/weather.service";
-import { getWeatherInfo2 } from "../api-fetches/weather.tomorrow.service";
 import { dateConvertor } from "../api-fetches/date-convertor.service";
-import { ConvertAddress } from "../api-fetches/location-converter.service";
-import { ConvertAddress2 } from "../api-fetches/location-converter-2.service";
-import React, { useState } from "react";
+import { ConvertAddress } from "../api-fetches/location-converter";
 export async function getEventListViewModel() {
   const events = await getCalendarEvents();
   console.log("the events", events);
@@ -12,7 +9,7 @@ export async function getEventListViewModel() {
   return Promise.all(
     events.map(async (event, temprature, weatherCondition, weatherIcon) => {
       //const { lat, lon } = await ConvertAddress(event.location);
-      const convertedAddress = await ConvertAddress2(
+      const convertedAddress = await ConvertAddress(
         event.location ? event.location : "brussels"
       );
       console.log("converted address: ", convertedAddress);

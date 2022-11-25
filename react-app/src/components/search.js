@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import {
   geoApiOptions,
   GEO_API_URL,
-} from "../api-fetches/auto-cpmplete.service";
+} from "../api-fetches/auto-complete-service";
 
 const Search = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
