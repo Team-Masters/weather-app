@@ -8,7 +8,7 @@ import { Layout } from "antd";
 import { useNavigate } from "react-router-dom";
 import ProfilePicture from "../components/ProfilePicture";
 
-const Navbar = () => {
+const Navbar = ({setReveal}) => {
   const { Header } = Layout;
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navigate = useNavigate();
@@ -49,7 +49,7 @@ const Navbar = () => {
           <div className="forms-container">
             <Layout style={{ backgroundColor: "transparent" }}>
               <Header className="form-buttons">
-                <Appheader />
+                <Appheader setReveal={setReveal}/>
               </Header>
               <NavigationRoutes />
             </Layout>
