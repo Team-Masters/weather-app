@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { v4 } from "uuid";
-import "./event-list.css";
-import axios from "axios";
-import { getEventListViewModel } from "../view-models/event-list.vm";
-export function EventList({ events }) {
+import { getEventListViewModel } from "../view-models/EventsList";
+
+function EventList({ events }) {
   const [vm, setVm] = useState([]);
 
   useEffect(() => {
@@ -42,3 +41,5 @@ export function EventList({ events }) {
     </>
   );
 }
+
+export default EventList;
