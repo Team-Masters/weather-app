@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuthContext } from "../utilities/AuthContext";
 import { removeToken } from "../utilities/tokens";
 import { Button } from "antd";
+import { FcGoogle } from "react-icons/fc";
 
 const AppHeader = () => {
   const { user } = useAuthContext();
@@ -19,7 +20,7 @@ const AppHeader = () => {
       {user ? (
         <>
           <Button className="log-in-button" href="/Profile" type="primary">
-            profile
+            <FcGoogle /> Calendar
           </Button>
           <Button
             className="auth_button_logout"

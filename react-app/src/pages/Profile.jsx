@@ -4,7 +4,6 @@ import EventList from "../components/EventList";
 const Profile = () => {
   return (
     <>
-      <h4>Hello user!</h4>
       <EventList />
     </>
   );
