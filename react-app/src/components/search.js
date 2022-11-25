@@ -1,10 +1,10 @@
 import { AsyncPaginate } from "react-select-async-paginate";
-import { CiSettings } from "react-icons/ci";
 import React, { useState } from "react";
 import {
   geoApiOptions,
   GEO_API_URL,
 } from "../api-fetches/auto-complete-service";
+import LightToDark from "../utilities/LightToDark";
 
 const Search = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
@@ -41,11 +41,8 @@ const Search = ({ onSearchChange }) => {
         onChange={handleOnChange}
         loadOptions={loadOptions}
       />
-      <div className="settings-icon">
-        <h1>
-          <CiSettings />
-        </h1>
-      </div>
+
+      <LightToDark />
     </div>
   );
 };
