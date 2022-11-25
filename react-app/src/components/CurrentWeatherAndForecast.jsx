@@ -38,15 +38,11 @@ const CurrentWeatherAndForecast = () => {
   console.log("forecast: ", forecast);
   return (
     <>
-      <div className="home-container">
-        <div className="search-container">
-          <Search onSearchChange={handleOnSearchChange} />
-        </div>
-        <GetWeather searchedData={currentWeather} />
-        <div className="forecast">
-          {forecast && <Forecast data={forecast} />}
-        </div>
+      <div className="search-container">
+        <Search onSearchChange={handleOnSearchChange} />
       </div>
+      <GetWeather searchedData={currentWeather} />
+      <div className="forecast">{forecast && <Forecast data={forecast} />}</div>
       <div className="navigation-bar">
         <Navbar />
       </div>

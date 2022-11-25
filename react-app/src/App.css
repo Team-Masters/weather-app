@@ -158,9 +158,12 @@
 }
 
 .search-container {
+  display: flex;
+  justify-content: center;
   max-width: 200px;
   margin-top: 60px;
   margin-bottom: 40px;
+  margin-left: 120px;
 }
 
 .search-container input,
@@ -193,6 +196,11 @@
 
 .settings-icon {
   cursor: pointer;
+}
+
+.light-to-dark {
+  background-color: transparent;
+  border: none;
 }
 
 /*** Weather forecast styling ***/
@@ -304,4 +312,16 @@
 
 .event-button:hover {
   color: white;
+}
+
+/** Theme picker styling **/
+.dark {
+  background: linear-gradient(
+      179.83deg,
+      #292c31 0.13%,
+      #949fa8 0.14%,
+      #838080 41.16%,
+      #fff 99.84%
+    ),
+    #fff;
 }
