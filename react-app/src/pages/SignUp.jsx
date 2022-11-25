@@ -32,7 +32,7 @@ const SignUp = () => {
         // set the user
         setUser(data.user);
         message.success(`Welcome to Weather App ${data.user.username}!`);
-        navigate("/Profile", { replace: true });
+        navigate("/Profile", { replace: false });
         console.log(data.user);
       }
     } catch (error) {

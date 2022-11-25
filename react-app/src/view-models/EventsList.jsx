@@ -2,6 +2,7 @@ import { getCalendarEvents } from "../api-fetches/events.service";
 import { getWeatherInfo } from "../api-fetches/weather.service";
 import { dateConvertor } from "../api-fetches/date-convertor.service";
 import { ConvertAddress } from "../api-fetches/location-converter";
+
 export async function getEventListViewModel() {
   const events = await getCalendarEvents();
   console.log("the events", events);
