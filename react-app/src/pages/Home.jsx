@@ -4,10 +4,8 @@ import CurrentWeatherAndForecast from "../components/CurrentWeatherAndForecast";
 const Home = () => {
   return (
     <>
-      <div>
-        <CurrentWeatherAndForecast />
-        <Navbar />
-      </div>
+      <CurrentWeatherAndForecast />
+      <Navbar />
     </>
   );
 };

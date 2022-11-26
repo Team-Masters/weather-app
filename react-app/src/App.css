@@ -1,16 +1,25 @@
 /* Styling for homepage */
 
 #root {
-  height: 670px;
-  width: 375px;
-}
-
-.home-container {
   display: flex;
   flex-direction: column;
   height: 670px;
   width: 375px;
   align-items: center;
+}
+
+.dark {
+  background: linear-gradient(
+      179.83deg,
+      #292c31 0.13%,
+      #949fa8 0.14%,
+      #838080 41.16%,
+      #fff 99.84%
+    ),
+    rgb(43, 41, 41);
+}
+
+.home-container {
   background: linear-gradient(
       179.83deg,
       #b9cdec 0.13%,
@@ -20,7 +29,6 @@
     ),
     #fff;
 }
-
 .city {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -152,23 +160,25 @@
 /** Search for location styles **/
 
 .search {
-  text-align: center;
+  text-align: right;
   padding: 1rem;
   padding-top: 3rem;
 }
 
 .search-container {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   max-width: 200px;
-  margin-top: 60px;
+  margin-top: 70px;
   margin-bottom: 40px;
-  margin-left: 120px;
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 0px;
 }
 
 .search-container input,
 .css-qc6sy-singleValue {
-  width: 200px !important;
+  width: 180px !important;
   padding-left: 5px !important;
   color: black !important;
 }
@@ -191,16 +201,19 @@
 .search-bar-section {
   display: flex;
   flex-direction: row;
-  gap: 10px;
 }
 
-.settings-icon {
+.search-icon {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .light-to-dark {
+  cursor: pointer;
   background-color: transparent;
   border: none;
+  padding: 0px;
 }
 
 /*** Weather forecast styling ***/
@@ -312,16 +325,4 @@
 
 .event-button:hover {
   color: white;
-}
-
-/** Theme picker styling **/
-.dark {
-  background: linear-gradient(
-      179.83deg,
-      #292c31 0.13%,
-      #949fa8 0.14%,
-      #838080 41.16%,
-      #fff 99.84%
-    ),
-    #fff;
 }

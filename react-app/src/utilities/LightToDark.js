@@ -9,19 +9,22 @@ function DartToLight() {
   };
 
   useEffect(() => {
-    if (theme === true) {
-      document.body.classList.add("dark");
-      document.body.classList.remove("home-container");
+    const root = document.getElementById("root");
+    if (theme === false) {
+      root.classList.add("home-container");
+      root.classList.remove("dark");
     } else {
-      document.body.classList.remove("dark");
-      document.body.classList.add("home-container");
+      root.classList.add("dark");
+      root.classList.remove("home-container");
     }
   });
 
   return (
-    <button onClick={handleClick} className="light-to-dark">
-      {theme ? <MdOutlineLightMode size={30} /> : <MdLightMode size={30} />}
-    </button>
+    <>
+      <button onClick={handleClick} className="light-to-dark">
+        {theme ? <MdOutlineLightMode size={30} /> : <MdLightMode size={30} />}
+      </button>
+    </>
   );
 }
 
