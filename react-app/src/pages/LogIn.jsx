@@ -61,6 +61,7 @@ const LogIn = () => {
           layout="vertical"
           onFinish={onFinish}
           autoComplete="off"
+          onSubmit={(e) => e.preventDefault()}
         >
           <h3>Log in your account</h3>
           <Form.Item

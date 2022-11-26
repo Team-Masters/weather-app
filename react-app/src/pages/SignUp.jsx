@@ -32,7 +32,7 @@ const SignUp = () => {
         // set the user
         setUser(data.user);
         message.success(`Welcome to Weather App ${data.user.username}!`);
-        navigate("/Profile", { replace: false });
+        navigate("/", { replace: true });
         console.log(data.user);
       }
     } catch (error) {
@@ -59,6 +59,7 @@ const SignUp = () => {
           name="basic"
           layout="vertical"
           onFinish={onFinish}
+          onSubmit={(e) => e.preventDefault()}
           autoComplete="off"
         >
           <Form.Item
