@@ -54,7 +54,7 @@ const SignUp = () => {
             closableafterClose={() => setError("")}
           />
         ) : null}
-        <h3>Create an account</h3>
+        <h3 className="signup-text">Create an account</h3>
         <Form
           name="basic"
           layout="vertical"

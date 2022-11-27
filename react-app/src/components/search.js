@@ -48,7 +48,7 @@ const Search = ({ onSearchChange }) => {
       {isShown && (
         <AsyncPaginate
           placeholder="Search"
-          debounce={600}
+          debounce={200}
           value={search}
           onChange={handleOnChange}
           loadOptions={loadOptions}
@@ -56,7 +56,7 @@ const Search = ({ onSearchChange }) => {
         />
       )}
       <button className="search-icon" onClick={handleClick}>
-        <BiSearch size={30} />
+        <BiSearch size={30} style={{ color: "white" }} />
       </button>
       <LightToDark />
     </div>
