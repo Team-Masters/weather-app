@@ -5,9 +5,19 @@ import {
   GEO_API_URL,
 } from "../api-fetches/auto-complete-service";
 import LightToDark from "../utilities/LightToDark";
+import { BiSearch } from "react-icons/bi";
 
 const Search = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = () => {
+    setIsShown(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsShown(false);
+  };
 
   const loadOptions = (inputValue) => {
     return fetch(
@@ -32,16 +42,22 @@ const Search = ({ onSearchChange }) => {
     setSearch(searchData);
     onSearchChange(searchData);
   };
+
   return (
     <div className="search-bar-section">
-      <AsyncPaginate
-        placeholder="Search"
-        debounce={600}
-        value={search}
-        onChange={handleOnChange}
-        loadOptions={loadOptions}
-      />
-
+      {isShown && (
+        <AsyncPaginate
+          placeholder="Search"
+          debounce={600}
+          value={search}
+          onChange={handleOnChange}
+          loadOptions={loadOptions}
+          onBlur={handleMouseLeave}
+        />
+      )}
+      <button className="search-icon" onClick={handleClick}>
+        <BiSearch size={30} />
+      </button>
       <LightToDark />
     </div>
   );

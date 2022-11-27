@@ -35,11 +35,9 @@ const Navbar = ({ setReveal }) => {
           className="hamburger-icon"
         >
           {navbarOpen ? (
-            <BiLeftArrowAlt
-              style={{ color: "black", width: "20px", height: "20px" }}
-            />
+            <BiLeftArrowAlt style={{ width: "20px", height: "20px" }} />
           ) : (
-            <FiMenu style={{ color: "black", width: "20px", height: "20px" }} />
+            <FiMenu style={{ width: "20px", height: "20px" }} />
           )}
         </button>
         <div className="login-signup-container">

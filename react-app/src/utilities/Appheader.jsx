@@ -3,13 +3,14 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuthContext } from "../utilities/AuthContext";
 import { removeToken } from "../utilities/tokens";
 import { Button } from "antd";
+import { FcGoogle } from "react-icons/fc";
 
 const AppHeader = () => {
   const { user } = useAuthContext();
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate("LogIn", { replace: true });
+    navigate("/", { replace: true });
     removeToken();
     window.location.reload();
   };
@@ -18,16 +19,24 @@ const AppHeader = () => {
     <div className="signup-login-buttons">
       {user ? (
         <>
-          <Button className="log-in-button" href="/Profile" type="primary">
-            profile
-          </Button>
-          <Button
-            className="auth_button_logout"
-            type="primary"
-            onClick={handleLogout}
-          >
-            Logout
-          </Button>
+          <Link to="/Profile">
+            <Button
+              className="log-in-button"
+              type="primary"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <FcGoogle /> Events
+            </Button>
+          </Link>
+          <Link to="/">
+            <Button
+              className="auth_button_logout"
+              type="primary"
+              onClick={handleLogout}
+            >
+              Logout
+            </Button>
+          </Link>
         </>
       ) : (
         <>
