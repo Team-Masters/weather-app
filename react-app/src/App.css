@@ -6,38 +6,31 @@
   height: 670px;
   width: 375px;
   align-items: center;
-}
-
-.dark {
-  background: linear-gradient(
-      179.83deg,
-      #292c31 0.13%,
-      #949fa8 0.14%,
-      #838080 41.16%,
-      #fff 99.84%
-    ),
-    rgb(43, 41, 41);
+  color: white;
 }
 
 .home-container {
-  background: linear-gradient(
-      179.83deg,
-      #b9cdec 0.13%,
-      #0973d0 0.14%,
-      #cdcdcd 41.16%,
-      #fff 99.84%
-    ),
-    #fff;
+  background-image: url("https://res.cloudinary.com/dembmmjyq/image/upload/v1669539619/ezgif-5-e622ad19a4_ucophz.gif");
+  background-size: 520px 670px;
+  color: white;
 }
+
+.dark {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b7/Rainy_weather_%283889028973%29.jpg");
+  background-size: cover;
+  color: white;
+}
+
 .city {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 23px;
+  font-size: 30px;
   text-align: center;
   letter-spacing: 0.01em;
   margin-top: 10px;
-  color: #000;
+  color: white;
+  text-shadow: 1px 1px black;
 }
 
 .temperature {
@@ -47,12 +40,14 @@
   line-height: 47px;
   text-align: center;
   letter-spacing: 0.01em;
+  text-shadow: 1px 1px black;
 }
 
 .weather-condition {
   text-align: center;
   font-weight: 500;
   font-size: 17px;
+  text-shadow: 1px 1px black;
 }
 
 .max-min-temperature {
@@ -63,6 +58,7 @@
   font-weight: 500;
   font-size: 16px;
   gap: 5px;
+  text-shadow: 1px 1px black;
 }
 
 .weather-icon-container {
@@ -86,6 +82,7 @@
   cursor: pointer;
   background: transparent;
   border: none;
+  color: white;
 }
 
 .menuNav {
@@ -157,12 +154,18 @@
   background-color: transparent !important;
 }
 
+.form_help_text,
+.signup-text {
+  color: black !important;
+}
+
 /** Search for location styles **/
 
 .search {
   text-align: right;
   padding: 1rem;
   padding-top: 3rem;
+  color: rgb(0, 0, 0) !important;
 }
 
 .search-container {
@@ -174,6 +177,7 @@
   margin-left: auto;
   margin-right: 20px;
   padding: 0px;
+  color: rgb(5, 5, 5) !important;
 }
 
 .search-container input,
@@ -185,11 +189,11 @@
 
 .css-1s2u09g-control {
   border: 1px solid #000 !important;
-  color: black !important;
+  color: white !important;
 }
 
 .css-14el2xx-placeholder {
-  color: black !important;
+  color: white !important;
   text-align: center;
 }
 
@@ -231,15 +235,15 @@
   height: 220px;
   left: 25px;
   background: radial-gradient(
-      178.6% 159.68% at 51.68% 0%,
-      rgba(18, 119, 208, 0.3) 0%,
-      rgba(75, 152, 219, 0.235313) 39.58%,
-      rgba(255, 255, 255, 0.03) 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    178.6% 159.68% at 51.68% 0%,
+    rgba(18, 119, 208, 0.3) 0%,
+    rgba(75, 152, 219, 0.235313) 39.58%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   font-size: 18px;
+  text-shadow: 1px 1px black;
 }
 
 .daily-item {
@@ -293,6 +297,7 @@
   padding-bottom: 15px;
   padding-right: 15px;
   padding-left: 15px;
+  color: black !important;
 }
 
 .event-location {
