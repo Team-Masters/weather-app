@@ -3,15 +3,15 @@
 #root {
   display: flex;
   flex-direction: column;
-  height: 670px;
-  width: 375px;
+  height: 100%;
+  width: 100%;
   align-items: center;
   color: white;
 }
 
 .home-container {
   background-image: url("https://res.cloudinary.com/dembmmjyq/image/upload/v1669539619/ezgif-5-e622ad19a4_ucophz.gif");
-  background-size: 520px 670px;
+  background-size: cover;
   color: white;
 }
 
@@ -78,7 +78,7 @@
   visibility: visible;
   position: fixed;
   left: 40px;
-  top: 40px;
+  top: 75px;
   cursor: pointer;
   background: transparent;
   border: none;
@@ -211,6 +211,7 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
+  margin-right: 10px;
 }
 
 .light-to-dark {

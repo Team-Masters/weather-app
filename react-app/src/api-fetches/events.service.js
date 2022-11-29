@@ -20,7 +20,7 @@ export async function getCalendarEvents() {
         plugin_name: "Weather-app",
       });
 
-      gapi.client.load("calendar", "v3", () => console.log("bom"));
+      gapi.client.load("calendar", "v3", () => console.log("connected!"));
 
       gapi.auth2
         .getAuthInstance()
