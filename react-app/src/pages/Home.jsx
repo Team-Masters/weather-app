@@ -1,11 +1,21 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import CurrentWeatherAndForecast from "../components/CurrentWeatherAndForecast";
+import CurrentWeather from "../components/CurrentWeather";
+import Forecast from "../components/Forecast";
+import Search from "../components/Search";
+import { useWeatherData } from "../api-fetches/getWeatherData";
+
 const Home = () => {
   return (
     <>
-      <CurrentWeatherAndForecast />
-      <Navbar />
+      <div className="navigation-bar">
+        <Navbar />
+      </div>
+      <div className="search-container">
+        <Search onSearchChange={useWeatherData} />
+      </div>
+      <CurrentWeather />
+      <div className="forecast">{false && <Forecast data={""} />}</div>
     </>
   );
 };
