@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
 import { GetWeather } from "../api-fetches/GetWeather";
 import Search from "../components/search";
 import {
@@ -30,12 +29,55 @@ const CurrentWeatherAndForecast = () => {
         setCurrentWeather({ city: searchData.label, weatherResponse });
         setForecast({ city: searchData.label, ...forecastResponse });
       })
+
       .catch((err) => {
         console.log(err);
       });
   };
   console.log("current weather: ", currentWeather);
-  console.log("forecast: ", forecast);
+
+  // BACKGROUND SEARCH
+
+  let bgSearch = currentWeather?.weatherResponse.weather[0].main;
+  console.log("RICK SEARCH", bgSearch);
+
+  switch (bgSearch) {
+    case "Snow":
+      document.getElementById("rickBody").style.backgroundImage =
+        "url('https://i.gifer.com/55Cz.gif')";
+      break;
+    case "Clouds":
+      document.getElementById("rickBody").style.backgroundImage =
+        "url('https://i.gifer.com/srG.gif')";
+      break;
+    case "Fog":
+      document.getElementById("rickBody").style.backgroundImage =
+        "url('https://i.gifer.com/BQRD.gif')";
+      break;
+    case "Mist":
+      document.getElementById("rickBody").style.backgroundImage =
+        "url('https://i.gifer.com/BQRD.gif')";
+      break;
+    case "Rain":
+      document.getElementById("rickBody").style.backgroundImage =
+        "url('https://i.gifer.com/4lsB.gif')";
+      break;
+    case "Clear":
+      document.getElementById("rickBody").style.backgroundImage =
+        "url('https://i.gifer.com/XFbw.gif')";
+      break;
+    case "Thunderstorm":
+      document.getElementById("rickBody").style.backgroundImage =
+        "url('https://i.gifer.com/7TDQ.gif')";
+      break;
+    default:
+      document.getElementById("rickBody").style.backgroundImage =
+        "url('https://i.gifer.com/XFbw.gif')";
+      break;
+  }
+
+  // END OF THE BACKGROUND
+
   return (
     <>
       <div className="search-container">
@@ -43,9 +85,6 @@ const CurrentWeatherAndForecast = () => {
       </div>
       <GetWeather searchedData={currentWeather} />
       <div className="forecast">{forecast && <Forecast data={forecast} />}</div>
-      <div className="navigation-bar">
-        <Navbar />
-      </div>
     </>
   );
 };

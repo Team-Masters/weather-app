@@ -25,6 +25,7 @@ const Search = ({ onSearchChange }) => {
       geoApiOptions
     )
       .then((response) => response.json())
+
       .then((response) => {
         return {
           options: response.data.map((city) => {
@@ -35,6 +36,7 @@ const Search = ({ onSearchChange }) => {
           }),
         };
       })
+
       .catch((err) => console.error(err));
   };
 
@@ -48,7 +50,7 @@ const Search = ({ onSearchChange }) => {
       {isShown && (
         <AsyncPaginate
           placeholder="Search"
-          debounce={200}
+          debounceTimeout={600}
           value={search}
           onChange={handleOnChange}
           loadOptions={loadOptions}
