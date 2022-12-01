@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import CurrentWeather from "../components/CurrentWeather";
+import WeatherCard from "../components/WeatherCard";
 import Forecast from "../components/Forecast";
 import Search from "../components/Search";
 import { useWeatherData } from "../api-fetches/getWeatherData";
@@ -14,8 +14,10 @@ const Home = () => {
       <div className="search-container">
         <Search onSearchChange={useWeatherData} />
       </div>
-      <CurrentWeather data={""} searchData={""} />
-      <div className="forecast">{false && <Forecast data={""} />}</div>
+      <WeatherCard data={""} searchData={""} />
+      <div>
+        <Forecast data={""} />
+      </div>
     </>
   );
 };

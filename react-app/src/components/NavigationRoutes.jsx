@@ -8,6 +8,7 @@ import Profile from "../pages/Profile";
 const NavigationRoutes = () => {
   return (
     <Routes>
+      <Route path="/" element={""} />
       <Route path="/LogIn" element={<LogIn />} />
       <Route path="/SignUp" element={<SignUp />} />
       <Route

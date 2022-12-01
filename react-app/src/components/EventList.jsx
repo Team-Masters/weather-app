@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { v4 } from "uuid";
-import { getEventListViewModel } from "./EventsList";
+// import { getEventListViewModel } from "./EventsList";
 
 function EventList({ events }) {
   const [vm, setVm] = useState([]);
 
   useEffect(() => {
-    getEventListViewModel().then((vm) => setVm(vm, true));
+    // getEventListViewModel().then((vm) => setVm(vm, true));
   }, []);
 
   return (
