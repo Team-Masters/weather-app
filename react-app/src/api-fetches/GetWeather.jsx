@@ -37,10 +37,12 @@ export const GetWeather = ({ searchedData }) => {
 
           // BACKGROUND CHANGE DEPENDING ON WEATHER
 
-          let rickMain = result.weather[0].main;
-          console.log("RICK MAIN 2", rickMain);
+          let bgCurrent = result.weather[0].main;
+          console.log("RICK MAIN 2", bgCurrent);
 
-          switch (rickMain) {
+          
+
+          switch (bgCurrent) {
             case 'Snow':
               document.getElementById('rickBody').style.backgroundImage =
                 "url('https://i.gifer.com/55Cz.gif')";
