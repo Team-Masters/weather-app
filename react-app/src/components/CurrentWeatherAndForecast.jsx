@@ -39,10 +39,10 @@ const CurrentWeatherAndForecast = () => {
 
   // BACKGROUND SEARCH
 
-  let backgroundSearch = currentWeather?.weatherResponse.weather[0].main;
-  console.log("RICK SEARCH", backgroundSearch);
+  let bgSearch = currentWeather?.weatherResponse.weather[0].main;
+  console.log("RICK SEARCH", bgSearch);
 
-  switch (backgroundSearch) {
+  switch (bgSearch) {
     case "Snow":
       document.getElementById("rickBody").style.backgroundImage =
         "url('https://i.gifer.com/55Cz.gif')";
