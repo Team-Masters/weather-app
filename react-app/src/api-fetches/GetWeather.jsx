@@ -41,26 +41,25 @@ export const GetWeather = ({ searchedData }) => {
 
           if (document.body) {
             if (7 <= currentTime && currentTime < 20) {
-                document.body.background = "http://itsnotch.com/tumblr/images/daytime_bg.jpg";
+              document.body.background =
+                "http://itsnotch.com/tumblr/images/daytime_bg.jpg";
+            } else {
+              document.body.background =
+                "http://itsnotch.com/tumblr/images/nighttime_bg.jpg";
             }
-            else {
-                document.body.background = "http://itsnotch.com/tumblr/images/nighttime_bg.jpg";
-            }
-        }
-          
-         
+          }
 
           // BACKGROUND CHANGE DEPENDING ON WEATHER
 
           let bgCurrent = result.weather[0].main;
           console.log("RICK MAIN 2", bgCurrent);
 
-          bgCurrent = "Snow"
+          // bgCurrent = "test"
 
           switch (bgCurrent) {
             case "Snow":
               document.getElementById("rickBody").style.backgroundImage =
-                "url('https://i.gifer.com/55Cz.gif')";
+                "url('https://i.gifer.com/67Z.gif')";
               break;
             case "Clouds":
               document.getElementById("rickBody").style.backgroundImage =
@@ -76,7 +75,7 @@ export const GetWeather = ({ searchedData }) => {
               break;
             case "Rain":
               document.getElementById("rickBody").style.backgroundImage =
-                "url('https://i.gifer.com/4lsB.gif')";
+                "url('https://i.gifer.com/V9O.gif')";
               break;
             case "Clear":
               document.getElementById("rickBody").style.backgroundImage =
@@ -84,7 +83,11 @@ export const GetWeather = ({ searchedData }) => {
               break;
             case "Thunderstorm":
               document.getElementById("rickBody").style.backgroundImage =
-                "url('https://i.gifer.com/7TDQ.gif')";
+                "url('https://i.gifer.com/E1gC.gif')";
+              break;
+            case "test":
+              document.getElementById("rickBody").style.backgroundImage =
+                "url('https://i.gifer.com/Lx0q.gif')";
               break;
             default:
               document.getElementById("rickBody").style.backgroundImage =

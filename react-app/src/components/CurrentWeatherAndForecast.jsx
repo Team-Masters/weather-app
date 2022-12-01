@@ -44,7 +44,7 @@ const CurrentWeatherAndForecast = () => {
   switch (bgSearch) {
     case "Snow":
       document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/55Cz.gif')";
+        "url('https://i.gifer.com/67Z.gif')";
       break;
     case "Clouds":
       document.getElementById("rickBody").style.backgroundImage =
@@ -60,7 +60,7 @@ const CurrentWeatherAndForecast = () => {
       break;
     case "Rain":
       document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/4lsB.gif')";
+        "url('https://i.gifer.com/V9O.gif')";
       break;
     case "Clear":
       document.getElementById("rickBody").style.backgroundImage =
@@ -68,7 +68,7 @@ const CurrentWeatherAndForecast = () => {
       break;
     case "Thunderstorm":
       document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/7TDQ.gif')";
+        "url('https://i.gifer.com/E1gC.gif')";
       break;
     default:
       document.getElementById("rickBody").style.backgroundImage =
