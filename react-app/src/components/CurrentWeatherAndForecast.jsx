@@ -78,6 +78,11 @@ const CurrentWeatherAndForecast = () => {
 
   // END OF THE BACKGROUND
 
+  // TIME OF DAY BACKGROUND
+
+  let currentTime = new Date().getHours();
+  console.log("RICK TIME 2", currentTime);
+
   return (
     <>
       <div className="search-container">

@@ -34,10 +34,28 @@ export const GetWeather = ({ searchedData }) => {
           setData(result);
           console.log("RESULT", result);
 
+          // TIME OF DAY BACKGROUND
+
+          let currentTime = new Date().getHours();
+          console.log("RICK TIME 1", currentTime);
+
+          if (document.body) {
+            if (7 <= currentTime && currentTime < 20) {
+                document.body.background = "http://itsnotch.com/tumblr/images/daytime_bg.jpg";
+            }
+            else {
+                document.body.background = "http://itsnotch.com/tumblr/images/nighttime_bg.jpg";
+            }
+        }
+          
+         
+
           // BACKGROUND CHANGE DEPENDING ON WEATHER
 
           let bgCurrent = result.weather[0].main;
           console.log("RICK MAIN 2", bgCurrent);
+
+          bgCurrent = "Snow"
 
           switch (bgCurrent) {
             case "Snow":
