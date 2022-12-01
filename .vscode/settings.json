@@ -1,11 +1,11 @@
 {
   "editor.formatOnSave": true,
-  "editor.renderIndentGuides": true,
   "editor.tabSize": 2,
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "liveServer.settings.port": 5504,
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
-  }
+  },
+  "editor.guides.indentation": true
 }

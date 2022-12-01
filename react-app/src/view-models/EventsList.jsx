@@ -1,5 +1,5 @@
 import { getCalendarEvents } from "../api-fetches/events.service";
-import { getWeatherInfo } from "../api-fetches/weather.service";
+import { getWeatherInfo } from "../api-fetches/weather.tomorrow.service";
 import { dateConvertor } from "../api-fetches/date-convertor.service";
 import { ConvertAddress } from "../api-fetches/location-converter";
 
@@ -17,22 +17,36 @@ export async function getEventListViewModel() {
       console.log("event location: ", event.location);
       const lat = convertedAddress.locations[0].referencePosition.latitude;
       const lon = convertedAddress.locations[0].referencePosition.longitude;
-      const startTime = event.start.dateTime.slice(0, -6);
-      const endTime = event.end.dateTime.slice(0, -6);
 
-      let convertedStartTime = JSON.stringify(await dateConvertor(startTime));
-      let convertedEndTime = JSON.stringify(await dateConvertor(endTime));
-      console.log("CONVERTED ENDDATE", convertedEndTime.slice(12, -7));
-      console.log("CONVERTED STARTDATE", convertedStartTime.slice(12, -7));
-      convertedStartTime = convertedStartTime.slice(12, -9);
-      convertedEndTime = convertedEndTime.slice(12, -9);
+      const fetchedStartTime = event.start.dateTime;
+      const fetchedEndTime = event.end.dateTime;
+      console.log(
+        "fetched start and end time",
+        fetchedStartTime,
+        fetchedEndTime
+      );
+      const startTimeDate = new Date(fetchedStartTime);
+      const endTimeDate = new Date(fetchedEndTime);
+      console.log("The start time: ", startTimeDate);
+      console.log("The start time: ", endTimeDate);
+
+      const startTimeIso = startTimeDate.toISOString();
+      const endTimeIso = endTimeDate.toISOString();
+
+      // let convertedStartTime = JSON.stringify(await dateConvertor(startTime));
+      // let convertedEndTime = JSON.stringify(await dateConvertor(endTime));
+      // console.log("CONVERTED ENDDATE", convertedEndTime.slice(12, -7));
+      // console.log("CONVERTED STARTDATE", convertedStartTime.slice(12, -7));
+      // convertedStartTime = convertedStartTime.slice(12, -9);
+      // convertedEndTime = convertedEndTime.slice(12, -9);
+
       // console.log("start time and end time", startTime, endTime);
       console.log("converted address lat & lon: ", lat, lon);
       console.log("the location ", lat, lon);
-      const weather = await getWeatherInfo(lat, lon);
+      const weather = await getWeatherInfo(lat, lon, startTimeIso, endTimeIso);
       // const weather2 = await getWeatherInfo2(lat, lon, startTime, endTime);
       console.log("weather :", weather);
-      //console.log(JSON.stringify(weather, null, 2));
+      console.log(JSON.stringify(weather, null, 2));
       //console.log(JSON.stringify(weather2, null, 2));
       //console.log("the weather", weather);
 
@@ -61,8 +75,8 @@ export async function getEventListViewModel() {
         temprature,
         weatherCondition,
         weatherIcon,
-        convertedStartTime,
-        convertedEndTime,
+        // convertedStartTime,
+        // convertedEndTime,
       };
     })
   );

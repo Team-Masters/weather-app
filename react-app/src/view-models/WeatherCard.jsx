@@ -6,7 +6,9 @@ const WeatherCard = ({ weatherData, searchedData }) => {
     <div>
       <div className="home-header">
         <div className="city">
-          {searchedData ? searchedData.city : weatherData.name}
+          {searchedData ? searchedData.city 
+          
+          : weatherData.name}
         </div>
         <br></br>
         <div className="temperature">
