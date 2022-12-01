@@ -14,7 +14,7 @@ const Home = () => {
       <div className="search-container">
         <Search onSearchChange={useWeatherData} />
       </div>
-      <CurrentWeather />
+      <CurrentWeather data={""} searchData={""} />
       <div className="forecast">{false && <Forecast data={""} />}</div>
     </>
   );

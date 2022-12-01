@@ -7,5 +7,6 @@ export async function getWeatherInfo(lat, long) {
     `${REACT_APP_API_URL}/weather?lat=${lat}&lon=${long}&units=metric&APPID=${REACT_APP_API_KEY}`
   );
   const res = await req.json();
+
   return res;
 }
