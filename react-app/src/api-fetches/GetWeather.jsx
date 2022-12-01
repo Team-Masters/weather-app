@@ -21,14 +21,14 @@ export const GetWeather = ({ searchedData }) => {
       )
         .then((res) => res.json())
         .then((result) => {
+
           setData(result);
           console.log("RESULT", result);
 
-          // RICK
+          // BACKGROUND CHANGE DEPENDING ON WEATHER
+
           let rickMain = result.weather[0].main;
           console.log("RICK MAIN 2", rickMain);
-
-          
 
           switch (rickMain) {
             case 'Snow':
@@ -43,6 +43,10 @@ export const GetWeather = ({ searchedData }) => {
               document.getElementById('rickBody').style.backgroundImage =
                 "url('https://i.gifer.com/BQRD.gif')";
               break;
+              case 'Mist':
+                document.getElementById('rickBody').style.backgroundImage =
+                  "url('https://i.gifer.com/BQRD.gif')";
+                break;
             case 'Rain':
               document.getElementById('rickBody').style.backgroundImage =
                 "url('https://i.gifer.com/4lsB.gif')";
