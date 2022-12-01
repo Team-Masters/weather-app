@@ -79,7 +79,6 @@ const CurrentWeatherAndForecast = () => {
 
   // END OF THE BACKGROUND
 
-  console.log("forecast: ", forecast);
   return (
     <>
       <div className="search-container">
