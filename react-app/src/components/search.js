@@ -50,7 +50,7 @@ const Search = ({ onSearchChange }) => {
       {isShown && (
         <AsyncPaginate
           placeholder="Search"
-          debounce={200}
+          debounce={1000}
           value={search}
           onChange={handleOnChange}
           loadOptions={loadOptions}

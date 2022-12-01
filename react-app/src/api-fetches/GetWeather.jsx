@@ -9,11 +9,21 @@ export const GetWeather = ({ searchedData }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      navigator.geolocation.getCurrentPosition(function (position) {
+    const demoLongitude = 4.351721;
+    const demoLatitude = 50.850346;
+
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
         setLat(position.coords.latitude);
         setLong(position.coords.longitude);
-      });
+      },
+      function () {
+        setLat(demoLatitude);
+        setLong(demoLongitude);
+      }
+    );
+
+    const fetchData = async () => {
       const REACT_APP_API_URL = "https://api.openweathermap.org/data/2.5/";
       const REACT_APP_API_KEY = "2361f15010a09f0db3c45282db7d2e16";
       await fetch(
