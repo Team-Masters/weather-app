@@ -27,9 +27,6 @@ const Search = ({ onSearchChange }) => {
       .then((response) => response.json())
 
       .then((response) => {
-
-
-
         return {
           options: response.data.map((city) => {
             return {
@@ -38,11 +35,7 @@ const Search = ({ onSearchChange }) => {
             };
           }),
         };
-
-
-
       })
-
 
       .catch((err) => console.error(err));
   };
