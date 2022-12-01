@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
 import { GetWeather } from "../api-fetches/GetWeather";
 import Search from "../components/search";
 import {
