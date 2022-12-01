@@ -38,50 +38,114 @@ const CurrentWeatherAndForecast = () => {
 
   // BACKGROUND SEARCH
 
+  let currentTime = new Date().getHours();
+
   let bgSearch = currentWeather?.weatherResponse.weather[0].main;
   console.log("RICK SEARCH", bgSearch);
 
+  // bgCurrent = "Clear";
+  // currentTime = 14;
+
   switch (bgSearch) {
     case "Snow":
-      document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/67Z.gif')";
+      if (document.body) {
+        if (currentTime >= 6 && currentTime < 18) {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/67Z.gif')";
+        } else {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/YY5R.gif')";
+        }
+      }
+
       break;
+
     case "Clouds":
-      document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/srG.gif')";
+      if (document.body) {
+        if (currentTime >= 6 && currentTime < 18) {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/srG.gif')";
+        } else {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/5plk.gif')";
+        }
+      }
+
       break;
+
     case "Fog":
-      document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/BQRD.gif')";
+      if (document.body) {
+        if (currentTime >= 6 && currentTime < 18) {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/BQRD.gif')";
+        } else {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/yMJ.gif')";
+        }
+      }
       break;
     case "Mist":
-      document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/BQRD.gif')";
+      if (document.body) {
+        if (currentTime >= 6 && currentTime < 18) {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/BQRD.gif')";
+        } else {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/yMJ.gif')";
+        }
+      }
       break;
     case "Rain":
-      document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/V9O.gif')";
+      if (document.body) {
+        if (currentTime >= 6 && currentTime < 18) {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/V9O.gif')";
+        } else {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/FRRX.gif')";
+        }
+      }
       break;
     case "Clear":
-      document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/XFbw.gif')";
+      if (document.body) {
+        if (currentTime >= 6 && currentTime < 18) {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/XFbw.gif')";
+        } else {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/3lFW.gif')";
+        }
+      }
       break;
     case "Thunderstorm":
+      if (document.body) {
+        if (currentTime >= 6 && currentTime < 18) {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/E1gC.gif')";
+        } else {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/Pld.gif')";
+        }
+      }
+      break;
+    case "test":
       document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/E1gC.gif')";
+        "url('https://i.gifer.com/Lx0q.gif')";
       break;
     default:
-      document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/XFbw.gif')";
+      if (document.body) {
+        if (currentTime >= 6 && currentTime < 18) {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/XFbw.gif')";
+        } else {
+          document.body.style.backgroundImage =
+            "url('https://i.gifer.com/3lFW.gif')";
+        }
+      }
       break;
   }
 
   // END OF THE BACKGROUND
-
-  // TIME OF DAY BACKGROUND
-
-  let currentTime = new Date().getHours();
-  console.log("RICK TIME 2", currentTime);
 
   return (
     <>
