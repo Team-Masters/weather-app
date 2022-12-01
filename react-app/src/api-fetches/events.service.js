@@ -13,6 +13,7 @@ export async function getCalendarEvents() {
     const eventsString = sessionStorage.getItem("Saved Events");
     if (eventsString) {
       const parsedEvents = JSON.parse(eventsString);
+      alert("Value found in storage: ", parsedEvents)
       resolve(parsedEvents);
       return
     }
@@ -40,7 +41,7 @@ export async function getCalendarEvents() {
               timeMin: new Date().toISOString(),
               showDeleted: false,
               singleEvents: true,
-              maxResults: 1,
+              maxResults: 3,
               orderBy: "startTime",
             })
             .then((response) => {
