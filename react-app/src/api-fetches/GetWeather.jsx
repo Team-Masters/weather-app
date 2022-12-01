@@ -31,8 +31,51 @@ export const GetWeather = ({ searchedData }) => {
       )
         .then((res) => res.json())
         .then((result) => {
+
           setData(result);
-          console.log(result);
+          console.log("RESULT", result);
+
+          // BACKGROUND CHANGE DEPENDING ON WEATHER
+
+          let bgCurrent = result.weather[0].main;
+          console.log("RICK MAIN 2", bgCurrent);
+
+          
+
+          switch (bgCurrent) {
+            case 'Snow':
+              document.getElementById('rickBody').style.backgroundImage =
+                "url('https://i.gifer.com/55Cz.gif')";
+              break;
+            case 'Clouds':
+              document.getElementById('rickBody').style.backgroundImage =
+                "url('https://i.gifer.com/srG.gif')";
+              break;
+            case 'Fog':
+              document.getElementById('rickBody').style.backgroundImage =
+                "url('https://i.gifer.com/BQRD.gif')";
+              break;
+              case 'Mist':
+                document.getElementById('rickBody').style.backgroundImage =
+                  "url('https://i.gifer.com/BQRD.gif')";
+                break;
+            case 'Rain':
+              document.getElementById('rickBody').style.backgroundImage =
+                "url('https://i.gifer.com/4lsB.gif')";
+              break;
+            case 'Clear':
+              document.getElementById('rickBody').style.backgroundImage =
+                "url('https://i.gifer.com/XFbw.gif')";
+              break;
+            case 'Thunderstorm':
+              document.getElementById('rickBody').style.backgroundImage =
+                "url('https://i.gifer.com/7TDQ.gif')";
+              break;
+            default:
+              document.getElementById('rickBody').style.backgroundImage =
+                "url('https://i.gifer.com/XFbw.gif')";
+              break;
+          }
         });
     };
     fetchData();
