@@ -9,6 +9,10 @@
   color: white;
 }
 
+#rickBody {
+  background-size: cover;
+}
+
 /* .home-container {
   background-image: url("https://res.cloudinary.com/dembmmjyq/image/upload/v1669539619/ezgif-5-e622ad19a4_ucophz.gif");
   background-size: cover;
@@ -91,9 +95,9 @@
   top: 0;
   left: 0;
   bottom: 0;
-  height: 652px;
+  height: 100%;
   overflow: hidden;
-  max-width: 370px;
+  max-width: 100%;
   background: linear-gradient(
     179.83deg,
     #b9cdec 0.13%,
@@ -107,7 +111,9 @@
 
 .menuNav.showMenu {
   width: 100%;
+  height: 100%;
   visibility: visible;
+  margin-top: 0px;
 }
 
 /*** Forms ***/
@@ -222,19 +228,27 @@
 }
 
 /*** Weather forecast styling ***/
+.forecast {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+}
 
 .accordion {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 4px, 4px;
   padding: 4px;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
   position: absolute;
-  width: 328px;
+  width: auto;
   height: 220px;
   left: 25px;
+  right: 25px;
   background: radial-gradient(
     178.6% 159.68% at 51.68% 0%,
     rgba(18, 119, 208, 0.3) 0%,
