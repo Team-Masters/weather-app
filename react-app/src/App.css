@@ -311,19 +311,27 @@
 
 .event-time {
   font-size: 16px;
-  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .event-summary {
   font-size: 10px;
+  padding-right: 18px;
 }
 
-.event-condition {
+.event-icon {
   font-size: 10px;
+  padding-right: 18px;
 }
 
 .event-temprature {
   font-size: 22px;
+  margin-top: -60px;
+  padding-right: 25px;
+}
+
+.event-condition {
+  padding-right: 18px;
 }
 
 .event-button {
