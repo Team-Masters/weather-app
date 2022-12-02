@@ -34,17 +34,9 @@ export const GetWeather = ({ searchedData }) => {
           setData(result);
           console.log("RESULT", result);
 
-          // BACKGROUND CHANGE DEPENDING ON WEATHER
+          // BACKGROUND CHANGE DEPENDING ON WEATHER CONDITIONS
           let currentTime = new Date().getHours();
-
-          console.log("RICK TIME 1", currentTime);
-
           let bgCurrent = result.weather[0].main;
-
-          console.log("CURRENT DESCRIPTION", bgCurrent);
-
-          // bgCurrent = "Clear";
-          // currentTime = 19;
 
           switch (bgCurrent) {
             case "Snow":
