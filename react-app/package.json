@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
     "format": "prettier --write ./",
     "format:check": "prettier --check ./",
     "spell-check": "cspell  './**'",
