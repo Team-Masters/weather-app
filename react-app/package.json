@@ -13,7 +13,6 @@
     "@types/gapi.calendar": "^3.0.6",
     "@types/gapi.client": "^1.0.5",
     "antd": "^5.0.0",
-    "axios": "^1.2.0",
     "canvas": "^2.10.2",
     "gapi": "^0.0.3",
     "google-calendar": "^0.0.5",
