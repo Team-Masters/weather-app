@@ -57,11 +57,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-.weather-icon {
-  max-width: 150px;
+.weatherIcon {
+  max-width: 200px;
   height: 150px;
+  margin-left: 35px;
 }
 
 /* Styling for the hamburguer menu */

@@ -1,6 +1,9 @@
 import React from "react";
 
 const WeatherCard = ({ weatherData, searchedData }) => {
+  const icon = weatherData.weather[0].main;
+  console.log(searchedData);
+
   console.log("searcheddata: ", searchedData);
   return (
     <div>
@@ -50,13 +53,32 @@ const WeatherCard = ({ weatherData, searchedData }) => {
         </div>
         <div className="weather-icon-container">
           <img
-            src={`http://openweathermap.org/img/w/${
-              searchedData
-                ? searchedData.weatherResponse.weather[0].icon
-                : weatherData.weather[0].icon
-            }.png`}
+            src={
+              icon === "Clouds" && searchedData === null
+                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000346/weather-icons/cloudy_wtetrn.png"
+                : searchedData.weatherResponse.weather[0].main === "Clouds"
+                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000346/weather-icons/cloudy_wtetrn.png"
+                : icon === "Snow" && searchedData === null
+                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000343/weather-icons/snow_dvcrh3.png"
+                : searchedData.weatherResponse.weather[0].main === "Snow"
+                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000343/weather-icons/snow_dvcrh3.png"
+                : icon === "Rain" && searchedData === null
+                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000351/weather-icons/rain_eximx0.png"
+                : searchedData.weatherResponse.weather[0].main === "Rain"
+                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000351/weather-icons/rain_eximx0.png"
+                : icon === "Clear" && searchedData === null
+                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000348/weather-icons/clear_ytzg3n.png"
+                : searchedData.weatherResponse.weather[0].main === "Clear"
+                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000348/weather-icons/clear_ytzg3n.png"
+                : icon === "Thunderstorm" && searchedData === null
+                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000344/weather-icons/thunderstorm_susijo.png"
+                : searchedData.weatherResponse.weather[0].main ===
+                  "Thunderstorm"
+                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000344/weather-icons/thunderstorm_susijo.png"
+                : "https://res.cloudinary.com/dembmmjyq/image/upload/v1670012728/weather-icons/Sun_nou9kq.png"
+            }
             alt="weatherIcon"
-            className="weather-icon"
+            className="weatherIcon"
           />
         </div>
       </div>
