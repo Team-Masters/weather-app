@@ -15,7 +15,7 @@
     "antd": "^5.0.0",
     "canvas": "^2.10.2",
     "gapi": "^0.0.3",
-    "google-calendar": "^1.3.2",
+    "google-calendar": "^0.0.5",
     "google-calendar-api-client": "^0.0.5",
     "moment": "^2.29.4",
     "react": "^18.2.0",
