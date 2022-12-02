@@ -34,27 +34,19 @@ export const GetWeather = ({ searchedData }) => {
           setData(result);
           console.log("RESULT", result);
 
-          // BACKGROUND CHANGE DEPENDING ON WEATHER
+          // BACKGROUND CHANGE DEPENDING ON WEATHER CONDITIONS
           let currentTime = new Date().getHours();
-
-          console.log("RICK TIME 1", currentTime);
-
           let bgCurrent = result.weather[0].main;
-
-          console.log("CURRENT DESCRIPTION", bgCurrent);
-
-          // bgCurrent = "Clear";
-          // currentTime = 19;
 
           switch (bgCurrent) {
             case "Snow":
               if (document.body) {
                 if (currentTime >= 6 && currentTime < 18) {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/67Z.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669983673/Weather%20backgrounds/snow-day_tdgtzy.gif')";
                 } else {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/YY5R.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669975411/Weather%20backgrounds/snow-night_f7fd4h.gif')";
                 }
               }
 
@@ -64,10 +56,10 @@ export const GetWeather = ({ searchedData }) => {
               if (document.body) {
                 if (currentTime >= 6 && currentTime < 18) {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/srG.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669981796/Weather%20backgrounds/cloudy-day_v3d9ys.gif')";
                 } else {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/5plk.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669971850/Weather%20backgrounds/cloudy-night_e8mpfp.gif')";
                 }
               }
 
@@ -77,10 +69,10 @@ export const GetWeather = ({ searchedData }) => {
               if (document.body) {
                 if (currentTime >= 6 && currentTime < 18) {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/BQRD.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669977010/Weather%20backgrounds/day-fog_xloyg2.gif')";
                 } else {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/yMJ.gif')";
+                    "https://res.cloudinary.com/dembmmjyq/image/upload/v1669977001/Weather%20backgrounds/night-fog_zrj32a.gif')";
                 }
               }
               break;
@@ -88,10 +80,10 @@ export const GetWeather = ({ searchedData }) => {
               if (document.body) {
                 if (currentTime >= 6 && currentTime < 18) {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/BQRD.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669984688/Weather%20backgrounds/mist-day_jqbcoz.gif')";
                 } else {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/yMJ.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669977006/Weather%20backgrounds/mist-night_u2jvc5.gif')";
                 }
               }
               break;
@@ -99,10 +91,10 @@ export const GetWeather = ({ searchedData }) => {
               if (document.body) {
                 if (currentTime >= 6 && currentTime < 18) {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/V9O.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669982424/Weather%20backgrounds/rain-day_f86qzj.gif')";
                 } else {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/FRRX.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669982421/Weather%20backgrounds/rain-night_ui7pzj.gif')";
                 }
               }
               break;
@@ -110,10 +102,10 @@ export const GetWeather = ({ searchedData }) => {
               if (document.body) {
                 if (currentTime >= 6 && currentTime < 18) {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/XFbw.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669973535/Weather%20backgrounds/clear-day_ycddzf.gif')";
                 } else {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/3lFW.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669974891/Weather%20backgrounds/clear-night_ikomqq.gif')";
                 }
               }
               break;
@@ -121,10 +113,10 @@ export const GetWeather = ({ searchedData }) => {
               if (document.body) {
                 if (currentTime >= 6 && currentTime < 18) {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/E1gC.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669977008/Weather%20backgrounds/thunderstorm-day_sfnxen.gif')";
                 } else {
                   document.body.style.backgroundImage =
-                    "url('https://i.gifer.com/Pld.gif')";
+                    "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669977000/Weather%20backgrounds/thunderstorm-night_mbdg9t.gif')";
                 }
               }
               break;
