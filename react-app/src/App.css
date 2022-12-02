@@ -213,6 +213,7 @@
   background-color: transparent;
   border: none;
   padding: 0px;
+  visibility: hidden
 }
 
 /*** Weather forecast styling ***/
@@ -394,5 +395,6 @@
   .weather-icon {
     max-width: 200px;
     height: 200px;
+    
   }
 }
