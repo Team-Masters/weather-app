@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { GetWeather } from "../api-fetches/GetWeather";
-import Search from "../components/search";
+import { GetWeather } from "../components/GetWeather";
+import Search from "../components/Search";
 import {
   WEATHER_API_URL,
   WEATHER_API_KEY,

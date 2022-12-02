@@ -292,7 +292,7 @@
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 50px 50px;
   grid-gap: 3px;
-  max-width: 300px;
+  max-width: 320px;
   height: 120px;
   background-color: transparent;
   margin: 10px;
@@ -302,8 +302,8 @@
   border-radius: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
   color: black !important;
 }
 
@@ -313,19 +313,27 @@
 
 .event-time {
   font-size: 16px;
-  padding-left: 18px;
+  padding-right: 22px;
 }
 
 .event-summary {
   font-size: 10px;
+  padding-right: 20px;
 }
 
-.event-condition {
+.event-icon {
   font-size: 10px;
+  padding-right: 18px;
 }
 
 .event-temprature {
   font-size: 22px;
+  margin-top: -60px;
+  padding-right: 25px;
+}
+
+.event-condition {
+  padding-right: 18px;
 }
 
 .event-button {

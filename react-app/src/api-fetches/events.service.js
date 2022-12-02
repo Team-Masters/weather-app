@@ -9,6 +9,15 @@ export async function getCalendarEvents() {
   var SCOPES = "https://www.googleapis.com/auth/calendar.events";
 
   return new Promise((resolve, reject) => {
+
+    const eventsString = sessionStorage.getItem("Saved Events");
+    if (eventsString) {
+      const parsedEvents = JSON.parse(eventsString);
+      alert("Value found in storage: ", parsedEvents)
+      resolve(parsedEvents);
+      return
+    }
+
     gapi.load("client:auth2", () => {
       console.log("load client");
 
@@ -37,6 +46,7 @@ export async function getCalendarEvents() {
             })
             .then((response) => {
               const events = response.result.items;
+              sessionStorage.setItem("Saved Events", JSON.stringify(events))
               resolve(events);
             });
         });
