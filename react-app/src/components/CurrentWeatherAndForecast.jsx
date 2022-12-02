@@ -39,7 +39,6 @@ const CurrentWeatherAndForecast = () => {
   // BACKGROUND SEARCH
 
   let currentTime = new Date().getHours();
-
   let bgSearch = currentWeather?.weatherResponse.weather[0].main;
   console.log("RICK SEARCH", bgSearch);
 
@@ -127,10 +126,6 @@ const CurrentWeatherAndForecast = () => {
             "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669977000/Weather%20backgrounds/thunderstorm-night_mbdg9t.gif')";
         }
       }
-      break;
-    case "test":
-      document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/Lx0q.gif')";
       break;
     default:
       if (document.body) {

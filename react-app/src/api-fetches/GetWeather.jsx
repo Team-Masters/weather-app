@@ -120,10 +120,7 @@ export const GetWeather = ({ searchedData }) => {
                 }
               }
               break;
-            case "test":
-              document.getElementById("rickBody").style.backgroundImage =
-                "url('https://i.gifer.com/Lx0q.gif')";
-              break;
+            
             default:
               if (document.body) {
                 if (currentTime >= 6 && currentTime < 18) {
