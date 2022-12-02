@@ -19,17 +19,17 @@ function DartToLight() {
     }
   });
 
-  return (
-    <>
-      <button onClick={handleClick} className="light-to-dark">
-        {theme ? (
-          <MdOutlineLightMode size={30} style={{ color: "white" }} />
-        ) : (
-          <MdLightMode size={30} style={{ color: "white" }} />
-        )}
-      </button>
-    </>
-  );
+  // return (
+  //   <>
+  //     <button onClick={handleClick} className="light-to-dark">
+  //       {theme ? (
+  //         <MdOutlineLightMode size={30} style={{ color: "white" }} />
+  //       ) : (
+  //         <MdLightMode size={30} style={{ color: "white" }} />
+  //       )}
+  //     </button>
+  //   </>
+  // );
 }
 
 export default DartToLight;

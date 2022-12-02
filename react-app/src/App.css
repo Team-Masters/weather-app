@@ -160,6 +160,7 @@
   padding: 1rem;
   padding-top: 3rem;
   color: rgb(0, 0, 0) !important;
+  
 }
 
 .search-container {
@@ -171,7 +172,8 @@
   margin-left: auto;
   margin-right: 20px;
   padding: 0px;
-  color: rgb(5, 5, 5) !important;
+  color: rgba(5, 5, 5, 0.829) !important;
+  
 }
 
 .search-container input,
@@ -179,33 +181,49 @@
   width: 140px !important;
   padding-left: 5px !important;
   color: black !important;
+   
 }
+
+/* SEARCH TRANSPARENCY */
+
+
+
+
 
 .css-1s2u09g-control {
   border: 1px solid #000 !important;
+
   color: white !important;
+  
+  
 }
 
 .css-14el2xx-placeholder {
   color: black !important;
+
   text-align: center;
+  
 }
 
 .css-1okebmr-indicatorSeparator,
 .css-tj5bde-Svg {
   border: 1px solid white !important;
+  
 }
 
 .search-bar-section {
   display: flex;
   flex-direction: row;
+  border: none;
+  
 }
 
 .search-icon {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  margin-right: 10px;
+  margin-right: 20px;
+  
 }
 
 .light-to-dark {
@@ -213,6 +231,7 @@
   background-color: transparent;
   border: none;
   padding: 0px;
+  
 }
 
 /*** Weather forecast styling ***/
