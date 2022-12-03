@@ -1,3 +1,5 @@
+import { message } from "antd";
+
 export async function getCalendarEvents() {
   var gapi = window.gapi;
   var API_KEY = "AIzaSyDjOmUfOFphy62WfxzbK4sZWabX5mC6a2A";
@@ -9,13 +11,12 @@ export async function getCalendarEvents() {
   var SCOPES = "https://www.googleapis.com/auth/calendar.events";
 
   return new Promise((resolve, reject) => {
-
     const eventsString = sessionStorage.getItem("Saved Events");
     if (eventsString) {
       const parsedEvents = JSON.parse(eventsString);
-      alert("Value found in storage: ", parsedEvents)
+      message.success("Events found!");
       resolve(parsedEvents);
-      return
+      return;
     }
 
     gapi.load("client:auth2", () => {
@@ -46,7 +47,7 @@ export async function getCalendarEvents() {
             })
             .then((response) => {
               const events = response.result.items;
-              sessionStorage.setItem("Saved Events", JSON.stringify(events))
+              sessionStorage.setItem("Saved Events", JSON.stringify(events));
               resolve(events);
             });
         });
