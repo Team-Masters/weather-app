@@ -61,9 +61,8 @@
 }
 
 .weatherIcon {
-  max-width: 200px;
-  height: 150px;
-  margin-left: 36px;
+  max-width: 120px;
+  height: 100px;
 }
 
 /* Styling for the hamburguer menu */
