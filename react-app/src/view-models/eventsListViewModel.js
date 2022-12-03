@@ -1,5 +1,8 @@
 import { getCalendarEvents } from "../api-fetches/events.service";
-import { getWeatherInfo, getWeatherInfo2 } from "../api-fetches/weather.tomorrow.service";
+import {
+  getWeatherInfo,
+  getWeatherInfo2,
+} from "../api-fetches/weather.tomorrow.service";
 import { dateConvertor } from "../api-fetches/date-convertor.service";
 import { ConvertAddress } from "../api-fetches/location-converter";
 
@@ -33,8 +36,8 @@ export async function getEventListViewModel() {
       const startTimeIso = startTimeDate.toISOString();
       const endTimeIso = endTimeDate.toISOString();
 
-      let convertedStartTime = JSON.stringify(fetchedStartTime).slice(12, -7)
-      let convertedEndTime = JSON.stringify(fetchedEndTime).slice(12, -7)
+      let convertedStartTime = JSON.stringify(fetchedStartTime).slice(12, -7);
+      let convertedEndTime = JSON.stringify(fetchedEndTime).slice(12, -7);
       //console.log("CONVERTED ENDDATE", convertedEndTime.slice(12, -7));
       //console.log("CONVERTED STARTDATE", convertedStartTime.slice(12, -7));
       // convertedStartTime = convertedStartTime.slice(12, -9);
@@ -44,7 +47,12 @@ export async function getEventListViewModel() {
       console.log("converted address lat & lon: ", lat, lon);
       console.log("the location ", lat, lon);
       const weather = await getWeatherInfo(lat, lon, startTimeIso, endTimeIso);
-      const weather2 = await getWeatherInfo2(lat, lon, startTimeIso, endTimeIso);
+      const weather2 = await getWeatherInfo2(
+        lat,
+        lon,
+        startTimeIso,
+        endTimeIso
+      );
       // const weather2 = await getWeatherInfo2(lat, lon, startTime, endTime);
       console.log("weather :", weather);
       console.log("weather2 :", weather2);
@@ -65,12 +73,12 @@ export async function getEventListViewModel() {
 
       let newData = {
         event: event,
-        weathertemprature: weather.data.timelines[0].intervals[0].values
-          .temperature,
-        weatherCondition: weather2.data.timelines[0].intervals[0].values
-          .weatherCode,
+        weathertemprature:
+          weather.data.timelines[0].intervals[0].values.temperature,
+        weatherCondition:
+          weather2.data.timelines[0].intervals[0].values.weatherCode,
         startTime: convertedStartTime,
-        endTime: convertedEndTime
+        endTime: convertedEndTime,
         // temprature: temprature,
         // weatherCondition: weatherCondition,
         // weatherIcon: weatherIcon,

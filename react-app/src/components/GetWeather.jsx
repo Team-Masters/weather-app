@@ -34,7 +34,7 @@ export const GetWeather = ({ searchedData }) => {
           setData(result);
           console.log("RESULT", result);
 
-          // BACKGROUND CHANGE DEPENDING ON WEATHER 
+          // BACKGROUND CHANGE DEPENDING ON WEATHER
           let currentTime = new Date().getHours();
           let bgCurrent = result.weather[0].main;
 

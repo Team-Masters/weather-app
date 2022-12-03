@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { useAuthContext } from "../utilities/AuthContext";
-import { removeToken } from "../utilities/tokens";
+import { useAuthContext } from "./AuthContext";
+import { removeToken } from "./tokens";
 import { Button } from "antd";
 import { FcGoogle } from "react-icons/fc";
 
