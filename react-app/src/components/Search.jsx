@@ -41,6 +41,10 @@ const Search = ({ onSearchChange }) => {
   };
 
   const handleOnChange = (searchData) => {
+    const targetDiv = document.getElementById("windows-load-forecast");
+    if (targetDiv.style.display !== "none") {
+      targetDiv.style.display = "none";
+    }
     setSearch(searchData);
     onSearchChange(searchData);
   };

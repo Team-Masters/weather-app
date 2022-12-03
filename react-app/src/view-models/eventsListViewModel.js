@@ -3,7 +3,6 @@ import {
   getWeatherInfo,
   getWeatherInfo2,
 } from "../api-fetches/weather.tomorrow.service";
-import { dateConvertor } from "../api-fetches/date-convertor.service";
 import { ConvertAddress } from "../api-fetches/location-converter";
 
 export async function getEventListViewModel() {

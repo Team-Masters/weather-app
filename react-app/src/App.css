@@ -61,9 +61,8 @@
 }
 
 .weatherIcon {
-  max-width: 200px;
-  height: 150px;
-  margin-left: 36px;
+  max-width: 120px;
+  height: 100px;
 }
 
 /* Styling for the hamburguer menu */
@@ -405,4 +404,56 @@
     max-width: 200px;
     height: 200px;
   }
+}
+
+/*** Forecast on windows load ***/
+
+.windows-load-forecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 4px, 4px;
+  padding: 4px;
+  width: 100%;
+  height: 220px;
+  left: 25px;
+  right: 25px;
+  background: radial-gradient(
+    178.6% 159.68% at 51.68% 0%,
+    rgba(0, 6, 12, 0.3) 0%,
+    rgba(2, 20, 36, 0.235) 39.58%,
+    rgba(10, 10, 10, 0.03) 100%
+  );
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  font-size: 18px;
+  text-shadow: 1px 1px black;
+  padding: 10px;
+}
+
+.forecast-cards {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-icon-onload {
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+}
+
+.temperature-on-windows-load {
+  font-size: 25px;
+}
+
+.hourly-forecast {
+  font-size: 26px;
+  border: 0px;
+  padding: 0px;
+  line-height: normal;
 }

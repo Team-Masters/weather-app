@@ -1,10 +1,6 @@
-import React from "react";
-
 const WeatherCard = ({ weatherData, searchedData }) => {
   const icon = weatherData.weather[0].main;
-  console.log(searchedData);
 
-  console.log("searcheddata: ", searchedData);
   return (
     <div>
       <div className="home-header">
