@@ -31,7 +31,7 @@ const WeatherCard = ({ weatherData, searchedData }) => {
                 ? Math.trunc(
                     searchedData.weatherResponse.main.temp_max - 273.15
                   )
-                : Math.trunc(weatherData.main.temp_max - 273.15)}{" "}
+                : Math.trunc(weatherData.main.temp_max)}{" "}
               &deg;
             </p>
           </div>
@@ -42,7 +42,7 @@ const WeatherCard = ({ weatherData, searchedData }) => {
                 ? Math.trunc(
                     searchedData.weatherResponse.main.temp_min - 273.15
                   )
-                : Math.trunc(weatherData.main.temp_min - 273.15)}{" "}
+                : Math.trunc(weatherData.main.temp_min)}{" "}
               &deg;
             </p>
           </div>

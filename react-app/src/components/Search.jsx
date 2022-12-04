@@ -4,7 +4,6 @@ import {
   geoApiOptions,
   GEO_API_URL,
 } from "../api-fetches/auto-complete-service";
-import LightToDark from "../utilities/LightToDark";
 import { BiSearch } from "react-icons/bi";
 
 const Search = ({ onSearchChange }) => {
@@ -64,7 +63,6 @@ const Search = ({ onSearchChange }) => {
       <button className="search-icon" onClick={handleClick}>
         <BiSearch size={30} style={{ color: "white" }} />
       </button>
-      <LightToDark />
     </div>
   );
 };

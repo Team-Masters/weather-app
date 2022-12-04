@@ -67,7 +67,7 @@ const SignUp = () => {
             name="username"
             rules={[{ required: true, type: "string" }]}
           >
-            <Input placeholder="Username" />
+            <Input placeholder="Username" maxlength={6} />
           </Form.Item>
           <Form.Item
             label="Email"
