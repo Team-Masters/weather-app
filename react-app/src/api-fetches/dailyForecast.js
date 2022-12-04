@@ -7,25 +7,40 @@ const DailyForecast = () => {
   const [longitude, setLongitude] = useState([]);
   const [urlToFetch, setUrlToFetch] = useState([]);
   const queryUrl = "https://api.openweathermap.org/data/2.5/";
-  const apiKey = "2361f15010a09f0db3c45282db7d2e16";
+  const apiKey = "e2613f2c550b09bcd9409a7d5b09f25b";
+  const defaultLatitude = 50.850346;
+  const defaultLongitude = 4.351721;
 
   useEffect(() => {
     const fetchForecast = () => {
-      navigator.geolocation.getCurrentPosition(async function (position) {
-        let xPosition = position.coords.latitude;
-        let yPosition = position.coords.longitude;
-        setLatitude(xPosition);
-        setLongitude(yPosition);
-        const URL =
-          queryUrl +
-          `forecast?lat=` +
-          xPosition +
-          `&lon=` +
-          yPosition +
-          `&units=metric&APPID=` +
-          apiKey;
-        setUrlToFetch(URL);
-      });
+      navigator.geolocation.getCurrentPosition(
+        async function (position) {
+          setLatitude(position.coords.latitude);
+          setLongitude(position.coords.longitude);
+          const URL =
+            queryUrl +
+            `forecast?lat=` +
+            latitude +
+            `&lon=` +
+            longitude +
+            `&units=metric&APPID=` +
+            apiKey;
+          setUrlToFetch(URL);
+        },
+        function () {
+          setLatitude(defaultLatitude);
+          setLongitude(defaultLongitude);
+          const URL =
+            queryUrl +
+            `forecast?lat=` +
+            latitude +
+            `&lon=` +
+            longitude +
+            `&units=metric&APPID=` +
+            apiKey;
+          setUrlToFetch(URL);
+        }
+      );
       fetch(urlToFetch)
         .then((response) => response.json())
         .then((data) => {
