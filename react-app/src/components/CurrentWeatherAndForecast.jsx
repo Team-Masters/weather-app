@@ -50,7 +50,7 @@ const CurrentWeatherAndForecast = () => {
 
   // BACKGROUND SEARCH
 
-  let currentTime = new Date().getHours();
+  
   
 
   let bgSearch = currentWeather?.weatherResponse.weather[0].main;
