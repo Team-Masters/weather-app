@@ -30,7 +30,7 @@ const DailyForecast = () => {
         .then((response) => response.json())
         .then((data) => {
           let resp = data.list;
-          let slicedArray = resp.slice(0, 6);
+          let slicedArray = resp.slice(0, 4);
           setDataForecast(slicedArray);
           console.log("Forecast onload", JSON.stringify(slicedArray, null, 2));
         });

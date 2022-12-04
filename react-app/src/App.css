@@ -209,13 +209,6 @@
   margin-right: 10px;
 }
 
-.light-to-dark {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  padding: 0px;
-}
-
 /*** Weather forecast styling ***/
 
 .forecast {
