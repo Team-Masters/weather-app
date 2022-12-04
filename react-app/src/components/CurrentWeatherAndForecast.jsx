@@ -40,7 +40,7 @@ const CurrentWeatherAndForecast = () => {
   // TIMEZONE OF SEARCHED CITY
 
   let timezone = currentWeather?.weatherResponse.timezone;
-  console.log("RICKtimezone", timezone);
+  
 
   let time = moment()
     .utcOffset(timezone / 60)
@@ -51,10 +51,10 @@ const CurrentWeatherAndForecast = () => {
   // BACKGROUND SEARCH
 
   let currentTime = new Date().getHours();
-  console.log("CURRENT TIME", typeof currentTime);
+  
 
   let bgSearch = currentWeather?.weatherResponse.weather[0].main;
-  console.log("RICK SEARCH", bgSearch);
+  
 
   // bgSearch = "Snow";
   // currentTime = 14;
