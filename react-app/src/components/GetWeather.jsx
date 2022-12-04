@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import WeatherCard from "../view-models/WeatherCard";
 import { Dimmer, Loader } from "semantic-ui-react";
+import moment from "moment";
 
 export const GetWeather = ({ searchedData }) => {
   const [lat, setLat] = useState([]);
@@ -25,7 +26,7 @@ export const GetWeather = ({ searchedData }) => {
 
     const fetchData = async () => {
       const REACT_APP_API_URL = "https://api.openweathermap.org/data/2.5/";
-      const REACT_APP_API_KEY = "2361f15010a09f0db3c45282db7d2e16";
+      const REACT_APP_API_KEY = "e2613f2c550b09bcd9409a7d5b09f25b";
       await fetch(
         `${REACT_APP_API_URL}/weather?lat=${lat}&lon=${long}&units=metric&APPID=${REACT_APP_API_KEY}`
       )
@@ -138,6 +139,7 @@ export const GetWeather = ({ searchedData }) => {
           }
         });
     };
+
     fetchData();
   }, [lat, long]);
   console.log("long and lat: ", long, lat);

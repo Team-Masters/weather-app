@@ -7,7 +7,7 @@ const DailyForecast = () => {
   const [longitude, setLongitude] = useState([]);
   const [urlToFetch, setUrlToFetch] = useState([]);
   const queryUrl = "https://api.openweathermap.org/data/2.5/";
-  const apiKey = "2361f15010a09f0db3c45282db7d2e16";
+  const apiKey = "e2613f2c550b09bcd9409a7d5b09f25b";
 
   useEffect(() => {
     const fetchForecast = () => {
