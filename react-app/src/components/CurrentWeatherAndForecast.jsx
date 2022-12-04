@@ -6,6 +6,7 @@ import {
   WEATHER_API_KEY,
 } from "../api-fetches/auto-complete-service";
 import Forecast from "../components/Forecast";
+import moment from "moment";
 
 const CurrentWeatherAndForecast = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -36,20 +37,27 @@ const CurrentWeatherAndForecast = () => {
   };
   console.log("current weather: ", currentWeather);
 
+  // TIMEZONE OF SEARCHED CITY
+
+  let timezone = currentWeather?.weatherResponse.timezone;
+
+  let time = moment()
+    .utcOffset(timezone / 60)
+    .format("HH:mm");
+  let newTime = parseInt(time);
+  console.log("SEARCH TIME TYPE", typeof newTime);
+
   // BACKGROUND SEARCH
 
-  let currentTime = new Date().getHours();
-
   let bgSearch = currentWeather?.weatherResponse.weather[0].main;
-  console.log("RICK SEARCH", bgSearch);
 
-  // bgCurrent = "Clear";
+  // bgSearch = "Snow";
   // currentTime = 14;
 
   switch (bgSearch) {
     case "Snow":
       if (document.body) {
-        if (currentTime >= 6 && currentTime < 18) {
+        if (newTime >= 6 && newTime < 18) {
           document.body.style.backgroundImage =
             "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669983673/Weather%20backgrounds/snow-day_tdgtzy.gif')";
         } else {
@@ -62,7 +70,7 @@ const CurrentWeatherAndForecast = () => {
 
     case "Clouds":
       if (document.body) {
-        if (currentTime >= 6 && currentTime < 18) {
+        if (newTime >= 6 && newTime < 18) {
           document.body.style.backgroundImage =
             "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669981796/Weather%20backgrounds/cloudy-day_v3d9ys.gif')";
         } else {
@@ -75,7 +83,7 @@ const CurrentWeatherAndForecast = () => {
 
     case "Fog":
       if (document.body) {
-        if (currentTime >= 6 && currentTime < 18) {
+        if (newTime >= 6 && newTime < 18) {
           document.body.style.backgroundImage =
             "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669977010/Weather%20backgrounds/day-fog_xloyg2.gif')";
         } else {
@@ -86,7 +94,7 @@ const CurrentWeatherAndForecast = () => {
       break;
     case "Mist":
       if (document.body) {
-        if (currentTime >= 6 && currentTime < 18) {
+        if (newTime >= 6 && newTime < 18) {
           document.body.style.backgroundImage =
             "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669984688/Weather%20backgrounds/mist-day_jqbcoz.gif')";
         } else {
@@ -97,7 +105,7 @@ const CurrentWeatherAndForecast = () => {
       break;
     case "Rain":
       if (document.body) {
-        if (currentTime >= 6 && currentTime < 18) {
+        if (newTime >= 6 && newTime < 18) {
           document.body.style.backgroundImage =
             "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669982424/Weather%20backgrounds/rain-day_f86qzj.gif')";
         } else {
@@ -108,7 +116,7 @@ const CurrentWeatherAndForecast = () => {
       break;
     case "Clear":
       if (document.body) {
-        if (currentTime >= 6 && currentTime < 18) {
+        if (newTime >= 6 && newTime < 18) {
           document.body.style.backgroundImage =
             "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669973535/Weather%20backgrounds/clear-day_ycddzf.gif')";
         } else {
@@ -119,7 +127,7 @@ const CurrentWeatherAndForecast = () => {
       break;
     case "Thunderstorm":
       if (document.body) {
-        if (currentTime >= 6 && currentTime < 18) {
+        if (newTime >= 6 && newTime < 18) {
           document.body.style.backgroundImage =
             "url('https://res.cloudinary.com/dembmmjyq/image/upload/v1669977008/Weather%20backgrounds/thunderstorm-day_sfnxen.gif')";
         } else {
@@ -128,13 +136,9 @@ const CurrentWeatherAndForecast = () => {
         }
       }
       break;
-    case "test":
-      document.getElementById("rickBody").style.backgroundImage =
-        "url('https://i.gifer.com/Lx0q.gif')";
-      break;
     default:
       if (document.body) {
-        if (currentTime >= 6 && currentTime < 18) {
+        if (newTime >= 6 && newTime < 18) {
           document.body.style.backgroundImage =
             "url('https://i.gifer.com/XFbw.gif')";
         } else {

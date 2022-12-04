@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import WeatherCard from "../view-models/WeatherCard";
 import { Dimmer, Loader } from "semantic-ui-react";
+import moment from "moment";
 
 export const GetWeather = ({ searchedData }) => {
   const [lat, setLat] = useState([]);
@@ -138,6 +139,7 @@ export const GetWeather = ({ searchedData }) => {
           }
         });
     };
+
     fetchData();
   }, [lat, long]);
   console.log("long and lat: ", long, lat);
