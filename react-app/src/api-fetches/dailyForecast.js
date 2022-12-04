@@ -8,11 +8,8 @@ const DailyForecast = () => {
   const [urlToFetch, setUrlToFetch] = useState([]);
   const queryUrl = "https://api.openweathermap.org/data/2.5/";
   const apiKey = "e2613f2c550b09bcd9409a7d5b09f25b";
-<<<<<<< HEAD
-=======
   const defaultLatitude = 50.850346;
   const defaultLongitude = 4.351721;
->>>>>>> 8d048e4325ae14282d4f4f30fa38af2b752124e9
 
   useEffect(() => {
     const fetchForecast = () => {

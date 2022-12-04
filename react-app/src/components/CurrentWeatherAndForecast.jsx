@@ -40,7 +40,6 @@ const CurrentWeatherAndForecast = () => {
   // TIMEZONE OF SEARCHED CITY
 
   let timezone = currentWeather?.weatherResponse.timezone;
-  
 
   let time = moment()
     .utcOffset(timezone / 60)
@@ -50,11 +49,7 @@ const CurrentWeatherAndForecast = () => {
 
   // BACKGROUND SEARCH
 
-  
-  
-
   let bgSearch = currentWeather?.weatherResponse.weather[0].main;
-  
 
   // bgSearch = "Snow";
   // currentTime = 14;
