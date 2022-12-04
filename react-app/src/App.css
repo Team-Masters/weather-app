@@ -105,7 +105,7 @@
   visibility: visible;
 }
 
-/*** Forms ***/
+/*** Styling for the forms ***/
 
 .login-signup-container {
   display: flex;
@@ -154,7 +154,7 @@
   color: black !important;
 }
 
-/** Search for location styles **/
+/** Styling for search locations **/
 
 .search {
   text-align: right;
@@ -209,7 +209,7 @@
   margin-right: 10px;
 }
 
-/*** Weather forecast styling ***/
+/*** Syles for weather forecast ***/
 
 .forecast {
   display: flex;
@@ -259,7 +259,16 @@
   max-width: 40px;
 }
 
-/*** Google Events stylig ***/
+/*** Styling for Google Events ***/
+.events-container {
+  display: flex;
+  flex-direction: column !important;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .events {
   display: flex;
   flex-direction: column;
@@ -279,7 +288,7 @@
   justify-content: center;
 }
 
-.event-container {
+.event-card {
   display: grid;
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 50px 50px;
@@ -339,9 +348,7 @@
   color: white;
 }
 
-/** Media queries **/
-
-@media all and (min-width: 1024px) {
+@media all and (min-width: 480px) {
   .accordion {
     font-size: 30px;
   }
@@ -449,4 +456,34 @@
   border: 0px;
   padding: 0px;
   line-height: normal;
+}
+
+.events-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.event-condition {
+  font-size: 18px;
+}
+
+.event-temprature {
+  font-size: 20px;
+}
+
+.event-icon img {
+  height: 50px;
+  width: 50px;
+}
+
+.event-time {
+  font-size: 15px;
+}
+
+.event-summary {
+  font-size: 15px;
 }
