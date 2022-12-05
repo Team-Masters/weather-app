@@ -31,9 +31,9 @@ function EventList({ events }) {
 
   return (
     <>
-      {vm.map((event, temprature, newData, weatherCondition, weatherIcon) => (
-        <div className="events-container">
-          <div key={v4} className="event-container">
+      <div className="events-container">
+        {vm.map((event, temprature, newData, weatherCondition, weatherIcon) => (
+          <div key={v4} className="event-card">
             <p className="event-location">
               {event.event.location
                 ? event.event.location.substring(0, 20)
@@ -172,8 +172,8 @@ function EventList({ events }) {
               event.newData.weatherCondition
             )}
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 }
