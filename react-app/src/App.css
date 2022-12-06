@@ -58,6 +58,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  
+  
 }
 
 .weatherIcon {
@@ -207,6 +209,10 @@
   background-color: transparent;
   border: none;
   margin-right: 10px;
+  visibility: visible;
+  position: fixed;
+  right: 40px;
+  top: 75px;
 }
 
 /*** Syles for weather forecast ***/
@@ -371,7 +377,6 @@
   font-size: 18px;
   text-shadow: 1px 1px black;
   padding: 10px;
-  
 }
 
 .forecast-cards {
@@ -382,13 +387,13 @@
   margin-top: 15px;
   justify-content: center;
   align-items: center;
-  
 }
 
 .weather-icon-onload {
   width: 60px;
   height: 60px;
   justify-content: center;
+  
 }
 
 .temperature-on-windows-load {
@@ -404,17 +409,30 @@
 
 /** Media queries **/
 
+/* WINDOWS LOAD MOBILE VIEW MEDIA QUERIES */
+
 @media screen and (max-width: 530px) {
   .accordion {
-    font-size: 30px;
-    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    transform: translateY(100px);
+    align-items: center;
+    -ms-flex-align: center;
+    height: auto;
+    margin-top: 50px;
+    
+    
   }
 
   .daily-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
+    justify-content: center;
     margin-top: 10px;
+    gap: 8vw;
+    
   }
 
   .city {
@@ -424,7 +442,7 @@
     font-size: 20px;
     text-align: center;
     letter-spacing: 0.01em;
-    margin-top: 100px;
+    margin-top: 10px;
     color: white;
     text-shadow: 1px 1px black;
   }
@@ -446,7 +464,6 @@
     text-shadow: 1px 1px black;
     margin-top: 10px;
     margin-bottom: 10px;
-    
   }
 
   .max-min-temperature {
@@ -464,6 +481,7 @@
   .weather-icon {
     max-width: 200px;
     height: 200px;
+    
   }
 
   .hamburger-icon {
@@ -476,21 +494,24 @@
 
   .windows-load-forecast {
     margin-top: 5px;
-    
   }
 }
+
+/* FULL SCREEN WINDOWS LOAD MEDIA QUERIES */
 
 @media screen and (min-width: 531px) {
   .accordion {
     font-size: 30px;
-    margin-left: 10px;
+    transform: translateY(45px);
+    align-items: center;
+    
   }
 
   .daily-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 10px;
+    font-size: 25px;
   }
 
   .city {
@@ -500,7 +521,7 @@
     font-size: 40px;
     text-align: center;
     letter-spacing: 0.01em;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
     color: white;
     text-shadow: 1px 1px black;
@@ -523,7 +544,6 @@
     text-shadow: 1px 1px black;
     margin-top: 20px;
     margin-bottom: 20px;
-    
   }
 
   .max-min-temperature {
@@ -541,6 +561,7 @@
   .weather-icon {
     max-width: 200px;
     height: 200px;
+    
   }
 
   .hamburger-icon {
@@ -553,6 +574,7 @@
 
   .windows-load-forecast {
     margin-top: 5px;
-    
   }
 }
+
+
