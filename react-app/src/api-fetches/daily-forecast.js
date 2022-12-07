@@ -73,7 +73,7 @@ const DailyForecast = () => {
                 />
               </div>
               <p className="temperature-on-windows-load">
-                {Math.trunc(forecast.main.temp)}&deg;
+                {Math.trunc(forecast.main.temp)}&deg;C
               </p>
             </div>
           </div>
