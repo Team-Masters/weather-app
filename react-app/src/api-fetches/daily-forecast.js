@@ -8,8 +8,8 @@ const DailyForecast = () => {
   const [urlToFetch, setUrlToFetch] = useState([]);
   const queryUrl = "https://api.openweathermap.org/data/2.5/";
   const apiKey = "e2613f2c550b09bcd9409a7d5b09f25b";
-  const defaultLatitude = 50.850346;
-  const defaultLongitude = 4.351721;
+  const defaultLatitude = 50.8503396;
+  const defaultLongitude = 4.3517103;
 
   useEffect(() => {
     const fetchForecast = () => {
@@ -47,7 +47,7 @@ const DailyForecast = () => {
           let resp = data.list;
           let slicedArray = resp.slice(0, 4);
           setDataForecast(slicedArray);
-          console.log("Forecast onload", JSON.stringify(slicedArray, null, 2));
+          console.log("Forecast onload", slicedArray);
         });
     };
     fetchForecast();
@@ -59,7 +59,6 @@ const DailyForecast = () => {
         return (
           <div key={forecast.main.humidity}>
             <div className="forecast-cards">
-              {/* <p>{moment(forecast.dt_txt).format('ddd')}</p> */}
               <div className="hourly-forecast">
                 <p className="hourly-forecast">
                   {moment(forecast.dt_txt).format("HH:mm")}
