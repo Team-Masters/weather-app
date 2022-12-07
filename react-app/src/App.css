@@ -58,8 +58,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  
-  
 }
 
 .weatherIcon {
@@ -337,7 +335,7 @@
 
 .event-temprature {
   font-size: 22px;
-  margin-top: -60px;
+  margin-top: -10px;
   padding-right: 25px;
 }
 
@@ -395,7 +393,6 @@
   width: 60px;
   height: 60px;
   justify-content: center;
-  
 }
 
 .temperature-on-windows-load {
@@ -423,8 +420,6 @@
     -ms-flex-align: center;
     height: auto;
     margin-top: 20px;
-    
-    
   }
 
   .daily-item {
@@ -434,7 +429,6 @@
     justify-content: center;
     margin-top: 10px;
     gap: 8vw;
-    
   }
 
   .city {
@@ -483,7 +477,6 @@
   .weather-icon {
     max-width: 200px;
     height: 200px;
-    
   }
 
   .hamburger-icon {
@@ -504,10 +497,9 @@
 @media screen and (min-width: 531px) {
   .accordion {
     font-size: 30px;
-    transform: translateY(90px); 
+    transform: translateY(90px);
     align-items: center;
     align-items: flex-start;
-    
   }
 
   .daily-item {
@@ -565,7 +557,7 @@
   .weather-icon {
     max-width: 200px;
     height: 200px;
-    transform: translateY(-70px); 
+    transform: translateY(-70px);
     align-self: center;
   }
 
@@ -581,5 +573,3 @@
     margin-top: 5px;
   }
 }
-
-

@@ -23,8 +23,7 @@
 
 ## General info
 
-> Weather app that enable users to get instant alerts regarding weather
-> conditions. It is a final project for hack your future
+> Weather app that enable users to instantly check the weather on their events.
 
 ## Screenshots
 
