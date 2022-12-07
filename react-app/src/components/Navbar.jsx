@@ -21,6 +21,7 @@ const Navbar = ({ setReveal }) => {
     if (navbarOpen) {
       navigate("/", { replace: true });
     } else {
+      navigate("/Profile", { replace: true });
     }
   };
 

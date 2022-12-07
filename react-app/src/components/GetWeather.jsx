@@ -10,8 +10,8 @@ export const GetWeather = ({ searchedData }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const demoLongitude = 4.351721;
-    const demoLatitude = 50.850346;
+    const demoLongitude = 4.3517103;
+    const demoLatitude = 50.8503396;
 
     navigator.geolocation.getCurrentPosition(
       function (position) {
