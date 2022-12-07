@@ -161,6 +161,7 @@
   padding: 1rem;
   padding-top: 3rem;
   color: rgb(0, 0, 0) !important;
+  cursor: pointer;
 }
 
 .search-container {
