@@ -34,7 +34,7 @@ const LogIn = () => {
 
         // Setting the user
         setUser(data.user);
-        message.success(`Welcome ${data.user.username}!`);
+        message.success(`Welcome back ${data.user.username}!`);
       }
     } catch (error) {
       console.error(error);
