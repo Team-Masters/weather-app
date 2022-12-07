@@ -71,10 +71,6 @@ const WeatherCard = ({ weatherData, searchedData }) => {
                 : searchedData.weatherResponse.weather[0].main ===
                   "Thunderstorm"
                 ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000344/weather-icons/thunderstorm_susijo.png"
-                : searchedData.weatherResponse.weather[0].main === "Mist"
-                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670402942/weather-icons/fog-cloud-3d-rendering-isometric-icon-png_zh5jxk.png"
-                : searchedData.weatherResponse.weather[0].main === "Fog"
-                ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670402942/weather-icons/fog-cloud-3d-rendering-isometric-icon-png_zh5jxk.png"
                 : "https://res.cloudinary.com/dembmmjyq/image/upload/v1670012728/weather-icons/Sun_nou9kq.png"
             }
             alt="weatherIcon"
