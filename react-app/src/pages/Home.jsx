@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import CurrentWeatherAndForecast from "../components/CurrentWeatherAndForecast";
-import DailyForecast from "../api-fetches/dailyForecast";
+import DailyForecast from "../api-fetches/daily-forecast";
 const Home = () => {
   return (
     <>
