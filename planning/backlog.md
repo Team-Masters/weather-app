@@ -9,7 +9,7 @@ create your own!
 
 > these are necessary for basic usability
 
-- [ ] As a user I want to see the weather and frcast of my current location.
+- [ ] As a user I want to see the weather and forcast of my current location.
 
   - When a user opens the app a pop up appear to ask location permission, when
     allowed the weather and forcast should appear.

@@ -1,133 +1,237 @@
 # How to Plan
 
-1. [Brainstorming](#brainstorming)
-1. [Prioritizing](#prioritizing)
-1. [User Story Dependencies](#user-story-Dependencies)
-1. [Acceptance Criteria](#acceptance-criteria)
-1. [Defining Tasks](#defining-tasks)
-1. [Project Board](#project-board)
-1. [Sprinting and Reviewing](#sprinting-and-reviewing)
+- [How to Plan](#how-to-plan)
+  - [ScreenShots](#screenshots)
+  - [Brainstorming](#brainstorming)
+  - [User-Persona](#user-persona)
+    - [User-1 Ted](#user-1-ted)
+    - [User-2 Sarah](#user-2-sarah)
+    - [User-3 James](#user-3-james)
+    - [Pete](#pete)
+  - [Prioritizing](#prioritizing)
+  - [Backlog](#backlog)
+    - [Must-Haves](#must-haves)
+    - [Should-Haves](#should-haves)
+    - [Could-Haves](#could-haves)
+  - [Development-Strategy](#development-strategy)
+    - [1. weather and forecast of current location](#1-weather-and-forecast-of-current-location)
+      - [Task w.1](#task-w1)
+      - [Task w.2](#task-w2)
+    - [2. Display weather of brussels if location denied.](#2-display-weather-of-brussels-if-location-denied)
+      - [Task d.1](#task-d1)
+      - [Task d.2](#task-d2)
+    - [3. Display weather and forcast by search.](#3-display-weather-and-forcast-by-search)
+      - [Task s.1](#task-s1)
+      - [Task s.2](#task-s2)
+    - [3. Display weather for events.](#3-display-weather-for-events)
+      - [Task e.1](#task-e1)
+      - [Task e.2](#task-e2)
+  - [Retrospective](#retrospective)
+    - [What went well](#what-went-well)
+    - [what went less well](#what-went-less-well)
+    - [what we can improve](#what-we-can-improve)
 
 ---
+## ScreenShots
 
+[hack the weathers]()
 ## Brainstorming
 
-> - What user needs and business problem does this app cover?
-> - Who is the user?
+> - Hack you weather is a tool tat helps you plan your events better by showing
+>   you exactly what the weather will be on your events.
+
+## User-Persona
+
+### User-1 Ted
+
+- Ted is a university students who is very busy with studies. Ted has few times
+  in a year where he can do outdorsey activities. He pans his events on google
+  calendar. sometimes when his activities get discarded due to unfavorable
+  weather. He needs an app that can show him what weather it will be in his
+  events.
+
+### User-2 Sarah
+
+- Sarah is a reale estate agent who works in brussels. Her job requires her to
+  go to different locations in brussels. She prefers to use the bicycle for
+  transportation, but she really doesnt like to get wet. She would like to know
+  the weather of brussels displayed at all time with ten hour forcast.
+
+### User-3 James
+
+- James is a regular guy. He likes to talk about weather of different cities and
+  compare them with each other. He is not very good at spelling so some weather
+  apps fail to display the weather he wants becouse they dont have auto
+  suggestion. He would like to have a weather app that shows weather of cities
+  by search and auto suggestes the cities.
+
+### Pete
+
+- Pete is a truck driver. He drives around in his truck from city to city. He
+  would like to know the weather of which ever city he is in.
+
 > - What is the business?
 
 ---
 
 ## Prioritizing
 
-> How to decide which stories to focus on.
+## Backlog
 
-At this stage in planning your team will decide which stories are more aor less
-important. You will be writing your ideas into a _backlog_.
+A collection of user stories you can choose from. Stories inside each priority
+level are not necessarily in order, it's up to your group to decide how they fit
+into your strategy. These are also just suggestion, feel free to change them or
+create your own!
 
-- [Many Strategies](https://zapier.com/blog/how-to-prioritize)
-- The Priority Quadrant
-  - [The Quadrant](https://www.youtube.com/watch?v=NGvsxPOmWuw)
-  - [Problems with this method](https://www.linkedin.com/pulse/why-prioritization-impacteffort-doesnt-work-itamar-gilad)
-- Other Perspectives
-  - [Alex Ponomarev](https://medium.com/swlh/prioritizing-user-stories-in-agile-projects-d1dd8dd79165)
-  - [Michael Lant](https://michaellant.com/2010/05/21/how-to-easily-prioritize-your-agile-stories/)
+### Must-Haves
 
----
+> these are necessary for basic usability
 
-## Acceptance Criteria
+- [ ] As a user I want to see the weather and frcast of my current location.
 
-> How you'll know when a story is finished.
+  - When a user opens the app a pop up appear to ask location permission, when
+    allowed the weather and forcast should appear.
 
-Now that you have an idea what the project will eventually be like, it's time to
-get specific. Acceptance criteria are a way to scope and verify your user
-stories.
+- [ ] As a user who I should be able to search for weather and forcast of any
+      city.
+  - There is a search input that allowes you to search for anycity and display
+    the weather and forcast of any city.
+- [ ] As a user I should be able to sign up to the app.
+  - There is a sign up button that allows you to sign up.
+- [ ] As a user I should be able to log in to the app.
+  - There is a button that allows you to log in to the app.
+- [ ] As a user I should be able to see the weather of the events from my google
+      calendar.
+  - There is a button that allows you to display the weather of the events from
+    the google calendar.
 
-> Given [context] when [a specific action is performed] then [a set of > > > > >
->
-> > consequences should occur]
+### Should-Haves
 
-You can write your first-draft acceptance criteria in your backlog, later moving
-them under each user story in your `development-strategy.md`, and ultimately
-creating a checklist in each issue.
+> these will complete the user experience, but are not necessary
 
-- [Yodiz](https://www.yodiz.com/blog/user-stories-acceptance-definition-and-criteria-in-agile-methodologies/)
-- [Zepel](https://zepel.io/agile/acceptance-criteria-for-user-stories/)
-- [Ruby Garage](https://rubygarage.org/blog/clear-acceptance-criteria-and-why-its-important)
-- [The Infinity Project](https://www.youtube.com/watch?v=KYS0ptJ4JWc)
-  1. User Input / User Action
-  2. Process
-  3. Results
+- [ ] As a user I should be able to see the weather of brussels if I deny
+      location.
+  - The weahter of brussels is displayed if location is denied.
+- [ ] As a user I should be able to see the background change depending on the
+      weather.
+  - The background changes based on the weather.
+- [ ] As a user I should be able to see the weather of brussels if my events
+      have no location.
+  - The weather of brussels is displayed on events that have no location.
+- [ ] As a user I should be able to see custom 3d icons instead of boring ones.
+  - There is custom 3D icons used in the app.
+- [ ] As a user the background on the location I searched should change based on
+      the time.
+  - Background changes based on the time of the location.
 
----
+### Could-Haves
 
-## User Story Dependencies
+> would be really cool ... if there's time
 
-> How to plan your development schedule.
-
-Some user stories depend on each other, some do not. Figuring out these
-relationships will make it possible go from a disorganized backlog to an
-organized development strategy.
-
-Understanding these dependencies can also allow you to develop much more
-efficiently. You can develope user stories that do not depend on each other in
-parallel instead of waiting for one to finish before moving on the next.
-
-Here are some questions you can ask yourself to help understand your project:
-
-- Do I need _A_ in order to be able to build _B_?
-- Can the user do B without A being available?
-
-A nice way to visualize these relationships is by creating a graph to visually
-represent dependencies:
-
-- [a quiz app](https://excalidraw.com/#json=5248906938023936,dnJz0Qy9tk5M4ho-RUiqYQ)
-- [a portfolio example](https://github.com/elewa-student/User-Centered-Development#story-dependencies)
-
-[Excalidraw](https://excalidraw.com/) is a great tool for collaboratively
-writing these diagrams.
-
----
-
-## Defining Tasks
-
-> How to break the story into coding tasks.
-
-Answering these questions is a way to break down complex user stories and to
-determine what code is needed. Following this questions guide will help you fill
-in the specifications of each step in your `development-strategy.md`
-
-Handlers are the glue of your user stories. Understanding your answers to these
-questions will not only help you decide which tasks to develop, but can be used
-to plan the details of the user story's handler:
-
-1. **User Story Objectives**
-   1. _... ?_
-2. **User Flow ?**
-   1. _... ?_
-3. **Wireframes ?**
-   1. _... ?_
-
-- [Lars Bilde](https://www.youtube.com/watch?v=gZ4uLafsxAk)
-- [Christiaan Verwijs](https://medium.com/the-liberators/10-powerful-strategies-for-breaking-down-user-stories-in-scrum-with-cheatsheet-2cd9aae7d0eb)
+- [ ] As a user I should be able to add locations on events with no location.
+  - There is a button to add location for events with no location.
+- [ ] As a user I should be able to add events from the app.
+- There is a button to add events from the app. -[ ] As a user I should be able
+  to Chooses from which calendar i display events.
+- There is a meachnism to chose which calendar to display.
+- [ ] As a user I should be able to categorize events.
+  - There is a mechaism to catagorize events.
+- [ ] As a use i should be able to get notification for all or selected events.
+  - There is a notification for certain events on chosen times of the day
+- [ ] As a user I should be able to post or make public certain events.
+  - There is a meachnism to let you make certain events public.
+- [ ] As a user I should be able public events going on around me.
+  - There is a butoon directing you to a page showing public events around you.
+- [ ] As a user i should be able to contact the person who posted the event via
+      messaging.
+  - There is DM features available.
 
 ---
 
-## Project Board
+## Development-Strategy
 
-> How to manage your team's project
+### 1. weather and forecast of current location
 
-Convert your development strategy into milestones (user stories), issues, labels
-and a project board. When you create the milestones for your user stories, you
-can include the _acceptance criteria_ as a checklist in the milestone's
-description.
+**As a user I want to see the weather and forcast of my current location.**
 
-This isn't a permanent thing! You can always adjust the project board and
-development strategy as the project evolves; adding issues, removing issues,
-adjusting tasks ... whatever is necessary to make the project go smoothly.
+- This user story is developed on branch `daily-forecast-on-windows-load`.
+- This branch is merged to `production-branch` branch after completion.
 
----
+#### Task w.1
 
-## Sprinting and Reviewing
+- Get geo locations.
+- Fetch weather from `openweathermap.com`
 
-The fun part, writing code and closing issues ;)
+#### Task w.2
+
+- Create components for the weather and forcastin react
+
+### 2. Display weather of brussels if location denied.
+
+**As a user I should be able to see the weather of brussels if no location.**
+
+- This user story is developed on branch `demo-location-wather`.
+- This branch is merged to `production-branch` branch after completion.
+
+#### Task d.1
+
+- Create var for longitude and latitude of brussels.
+- Integrate in a function using terniary operator.
+
+#### Task d.2
+
+- Create components weather and ten hour forecast.
+
+### 3. Display weather and forcast by search.
+
+**As a user I should be able to see the weather city by search.**
+
+- This user story is developed on branch `get-weahter-by-city-feature-alex`.
+- This branch is merged to `production-branch` branch after completion.
+
+#### Task s.1
+
+- `fetch` cities api.
+- `fetch` Convert cities api and turn to lon and lat.
+- `fetch` weather api using lon and lat.
+
+#### Task s.2
+
+- Integrate components to the new weather with `state()` weather and ten hour
+  forecast.
+
+### 3. Display weather for events.
+
+**As a user I should be able to see the weather of my calendar events.**
+
+- This user story is developed on branch `feature-get-weather-by-event`.
+- This branch is merged to `production-branch` branch after completion.
+
+#### Task e.1
+
+- `fetch` google calendar api.
+- Convert event location turn to lon and lat.
+- Convert event startTime and endTime to `ISOString()`.
+- `fetch` weather api using `lon lat startTime endTime`.
+
+#### Task e.2
+
+- Create new react components for the displayed data
+
+## Retrospective
+
+### What went well
+
+- View-Model approach for the events
+- All the must have tasks were properly implemented
+
+### what went less well
+
+- Working with google
+- Some phones don’t work specially icon for iphones.
+
+### what we can improve
+
+- Communication is key we could’ve done better
+- The coders did their job, designers did their job
+- Compromises were done and Sacrificing
