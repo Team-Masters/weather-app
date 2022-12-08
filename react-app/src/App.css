@@ -292,6 +292,8 @@
   padding-right: 15px;
   padding-left: 25px;
   color: black !important;
+  border-color: rgba(23, 99, 29, 0.945);
+  box-shadow: 10px 5px 5px rgba(209, 72, 72, 0.527);
 }
 
 .events {
@@ -315,6 +317,7 @@
 
 .event-location {
   font-size: 16px;
+  
 }
 
 .event-time {
@@ -323,9 +326,10 @@
 }
 
 .event-summary {
-  font-size: 10px;
+  font-size: 12px;
   padding-right: 20px;
   text-align: center;
+  font-weight: bold;
 }
 
 .event-icon {
@@ -410,7 +414,7 @@
 
 /* WINDOWS LOAD MOBILE VIEW MEDIA QUERIES */
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 690px) {
   .accordion {
     display: flex;
     flex-direction: column;
@@ -494,7 +498,7 @@
 
 /* FULL SCREEN WINDOWS LOAD MEDIA QUERIES */
 
-@media screen and (min-width: 531px) {
+@media screen and (min-width: 690px) {
   .accordion {
     font-size: 30px;
     transform: translateY(90px);
@@ -513,7 +517,7 @@
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     letter-spacing: 0.01em;
     margin-bottom: 20px;
