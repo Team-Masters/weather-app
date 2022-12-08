@@ -50,12 +50,18 @@ const WeatherCard = ({ weatherData, searchedData }) => {
           </div>
         </div>
         <div className="weather-icon-container">
-          
 
-          <img
+        <img
+          src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
+          alt="weatherIcon"
+          className="weather-icon"
+        />
+
+
+          {/* <img
             src={
               // RAIN
-              icon === "Rain" && searchedData === null
+              icon === "Clouds" && searchedData === null
                 ? "https://res.cloudinary.com/dembmmjyq/image/upload/v1670000351/weather-icons/rain_eximx0.png"
                 : searchedData.weatherResponse.weather[0].main === "Rain"
 
@@ -87,7 +93,7 @@ const WeatherCard = ({ weatherData, searchedData }) => {
             }
             alt="weatherIcon"
             className="weatherIcon"
-          />
+          /> */}
         </div>
       </div>
     </div>
