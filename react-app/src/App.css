@@ -112,11 +112,82 @@
   flex-direction: column;
   justify-content: center;
   margin-right: 40px;
+  color: #000;
   margin-top: 20px;
+  text-align: center;
+  padding: 10px;
 }
 
 .log-in-button {
   margin-right: 5px;
+  background-color: white;
+  color: black;
+}
+
+.loginbutton {
+  font-size: 14px;
+  height: 32px;
+  padding: 4px 15px;
+  border-radius: 6px;
+  outline: none;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  touch-action: manipulation;
+  background-color: #1677ff;
+  padding-bottom: 5px;
+}
+
+.authdiv {
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 24px;
+  vertical-align: top;
+  color: #000;
+  flex-direction: column;
+  display: flex;
+}
+
+.auth-label {
+  margin: 0;
+  padding: 0 0 8px;
+  white-space: initial;
+  text-align: start;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  position: relative;
+  max-width: 100%;
+  min-height: 1px;
+  font-size: 14px;
+}
+
+.auth-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  box-sizing: border-box;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.google-log-in {
+  padding: 10px;
+  margin-top: 15px;
 }
 
 .signup-login-buttons {
@@ -125,10 +196,6 @@
   justify-content: center;
 }
 
-.log-in-button {
-  background-color: white;
-  color: black;
-}
 
 .avatar-container {
   display: flex;
@@ -152,8 +219,22 @@
 .form_help_text,
 .signup-text {
   color: black !important;
+  padding: 13px;
 }
 
+.success {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imgsuccess {
+  width: 50%;
+}
+
+.errormessage {
+  color: red;
+}
 /** Styling for search locations **/
 
 .search {
@@ -317,7 +398,6 @@
 
 .event-location {
   font-size: 16px;
-  
 }
 
 .event-time {

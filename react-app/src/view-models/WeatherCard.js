@@ -1,8 +1,6 @@
 const WeatherCard = ({ weatherData, searchedData }) => {
   const icon = weatherData.weather[0].main;
 
-
-
   return (
     <div>
       <div className="home-header">
@@ -31,8 +29,8 @@ const WeatherCard = ({ weatherData, searchedData }) => {
               H:
               {searchedData
                 ? Math.trunc(
-                  searchedData.weatherResponse.main.temp_max - 273.15
-                )
+                    searchedData.weatherResponse.main.temp_max - 273.15
+                  )
                 : Math.trunc(weatherData.main.temp_max)}{" "}
               &deg;
             </p>
@@ -42,21 +40,19 @@ const WeatherCard = ({ weatherData, searchedData }) => {
               L:
               {searchedData
                 ? Math.trunc(
-                  searchedData.weatherResponse.main.temp_min - 273.15
-                )
+                    searchedData.weatherResponse.main.temp_min - 273.15
+                  )
                 : Math.trunc(weatherData.main.temp_min)}{" "}
               &deg;
             </p>
           </div>
         </div>
         <div className="weather-icon-container">
-
-        <img
-          src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
-          alt="weatherIcon"
-          className="weather-icon"
-        />
-
+          <img
+            src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
+            alt="weatherIcon"
+            className="weather-icon"
+          />
 
           {/* <img
             src={

@@ -1,7 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { BiLeftArrowAlt } from "react-icons/bi";
-import { FiMenu } from "react-icons/fi";
 import Appheader from "../utilities/Appheader";
 import NavigationRoutes from "./NavigationRoutes";
 import { Layout } from "antd";
@@ -33,13 +31,10 @@ const Navbar = ({ setReveal }) => {
             handleToggle();
             returnHomePage();
           }}
-          className="hamburger-icon"
+          className="hamburger-icon loginbutton"
         >
-          {navbarOpen ? (
-            <BiLeftArrowAlt style={{ width: "20px", height: "20px" }} />
-          ) : (
-            <FiMenu style={{ width: "20px", height: "20px" }} />
-          )}
+          {" "}
+          {navbarOpen ? "Home " : "Log In"}
         </button>
         <div className="login-signup-container">
           <div className="avatar-container">
