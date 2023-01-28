@@ -3,61 +3,67 @@ import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { Loader } from "semantic-ui-react";
-import { ToastContainer, toast } from "react-toastify";
+import { /*ToastContainer,*/ toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../firebase/config";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmpassword] = useState("");
-  let [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
   let text;
   let text1;
-  var text2;
   const signUser = (e) => {
     e.preventDefault();
-    if (password !== confirmpassword) {
-      toast.error = "Passwords must match";
-      alert("Passwords must match");
-    }
-
+    
     console.log(username, email, password, confirmpassword);
 
-    setIsLoading(true);
-
-    console.log(text, text2);
+    function text2() {
+      window.value= "Email is already in use"
+    };
+    function success(){
+      <Popup trigger={<button> Trigger</button>} position="right center">
+        <div>Sign Up Successful</div>
+      </Popup>
+    }
+    function noSuccess(){
+      <Popup trigger={<button> Trigger</button>} position="right center">
+        <div>Sign Up Unuccessful</div>
+      </Popup>
+    }
+  
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in
-        console.log("hi");
+
         const user = userCredential.user;
+        success();
         toast.success = "Sign Up Successful";
         navigate("/LogIn");
         alert("Sign Up Successful");
-        setIsLoading(false);
       })
       .catch((error) => {
         var errorCode = error.code;
-        var errorMessage = error.message;
         if (errorCode === "auth/email-already-in-use") {
-          alert("Email is already in use");
-          text2 = "Email is already in use";
+          text2();
         }
-        console.log(error);
+
+        noSuccess();
         alert("Sign Up Unuccessful");
         toast.error = "Sign Up Unsuccessful";
-        setIsLoading(false);
       });
+      console.log(window.value);
+
   };
   const notify = () => {
     if (password.length < 6) {
-      text1 = "Password has to be at least 6 characters";
+      text1 = "Use at least 6 characters";
     }
     if (password !== confirmpassword) {
       text = "Passwords must match";
@@ -67,10 +73,7 @@ const SignUp = () => {
 
   return (
     <>
-      {
-        //<ToastContainer/>//
-      }
-      {isLoading && <Loader />}
+    
       <section className="log-in-container form-buttons">
         <div>
           <h3>Create an account</h3>
@@ -89,6 +92,7 @@ const SignUp = () => {
                 className="auth-input"
               />
             </div>
+            
 
             <div className="authdiv">
               <label for="Email" className="auth-label">
@@ -102,7 +106,7 @@ const SignUp = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="auth-input"
               />
-              <p className="errormessage">{text2}</p>
+              <p className="errormessage">{window.value}</p>
             </div>
 
             <div className="authdiv">
@@ -135,14 +139,11 @@ const SignUp = () => {
             </div>
 
             <button type="submit" className="loginbutton">
-              {" "}
-              Sign Up{" "}
+              Sign Up
             </button>
           </form>
           <button className="google-log-in form-buttons">
-            {" "}
-            <FcGoogle /> Login with Google{" "}
-          </button>
+            <FcGoogle /> Login with Google</button>
         </div>
         <h5 className="form_help_text">
           Already have an account? <Link to="/LogIn">Log In</Link>

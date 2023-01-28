@@ -8,7 +8,9 @@ import {
   GoogleAuthProvider,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import Popup from "reactjs-popup";
 import { toast } from "react-toastify";
+import 'reactjs-popup/dist/index.css';
 import "../../firebase/config";
 
 const LogIn = () => {
@@ -16,6 +18,16 @@ const LogIn = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+  function success(){
+    <Popup trigger={<button> Trigger</button>} position="right center">
+      <div>Sign Up Successful</div>
+    </Popup>
+  }
+  function noSuccess(){
+    <Popup trigger={<button> Trigger</button>} position="right center">
+      <div>Sign Up Unuccessful</div>
+    </Popup>
+  }
 
   const logUser = (e) => {
     e.preventDefault();
@@ -27,27 +39,31 @@ const LogIn = () => {
         const user = userCredential.user;
         alert("Log In Successful");
         navigate("/Success");
+        success();
       })
       .catch((error) => {
         alert("Log In Unuccessful");
         toast.error = "Log In Unsuccessful";
+        noSuccess();
       });
   };
 
   const provider = new GoogleAuthProvider();
   const signInWGoogle = () => {
-    console.log("here  first");
+    
     const auth = getAuth();
     signInWithPopup(auth, provider)
       .then((result) => {
         // const user = result.user;
         toast.success("Login Successful");
         navigate("/Success");
+        success();
       })
       .catch((error) => {
         toast.error("Log In Unsuccesful");
+        noSuccess();
       });
-    console.log("here");
+    
   };
   
   return (
